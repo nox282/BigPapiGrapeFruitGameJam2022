@@ -9,6 +9,8 @@ Grapefruit/[Bb]uild/
 Grapefruit/[Bb]uilds/
 Grapefruit/[Ll]ogs/
 Grapefruit/[Mm]emoryCaptures/
+GrapeFruit/[Uu]serSettings/
+
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !Grapefruit/[Aa]ssets/**/*.meta
