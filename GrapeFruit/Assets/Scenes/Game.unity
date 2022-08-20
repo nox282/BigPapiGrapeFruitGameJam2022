@@ -381,17 +381,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7828296581892704120, guid: 92a8ade6a868cfe448dc3f4e48d74e71, type: 3}
   m_PrefabInstance: {fileID: 1179196880}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &321441675 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5284578947283000441, guid: f22c33e0f794f14449424cfa6e781e27, type: 3}
-  m_PrefabInstance: {fileID: 699707439}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcb1aebd715bb04381c6c5fc3250fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &674682837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -405,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5022783048416906237, guid: 826ebc1d3121a2a408f484263f4357b3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5022783048416906237, guid: 826ebc1d3121a2a408f484263f4357b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -498,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6342997733100889045, guid: f22c33e0f794f14449424cfa6e781e27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -12.77
       objectReference: {fileID: 0}
     - target: {fileID: 6342997733100889045, guid: f22c33e0f794f14449424cfa6e781e27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1311,7 +1300,7 @@ PrefabInstance:
     - target: {fileID: 3545586327865772207, guid: db7dafaf640e6b64191cc606c4d0f5ff, type: 3}
       propertyPath: UIPanel
       value: 
-      objectReference: {fileID: 321441675}
+      objectReference: {fileID: 0}
     - target: {fileID: 6342997733100889045, guid: db7dafaf640e6b64191cc606c4d0f5ff, type: 3}
       propertyPath: m_RootOrder
       value: 7
