@@ -16,7 +16,7 @@ public class DragableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        PawsController.Instance?.SetHoldingObject(true);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -41,6 +41,8 @@ public class DragableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         }
 
         transform.position = OriginalPosition;
+
+        PawsController.Instance?.SetHoldingObject(false);
     }
 
     protected virtual void OnDragged(DragObjectRecipient Recipient)
