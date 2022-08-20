@@ -10,5 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 364a1b07db38cac4994ed430d35817de, type: 3}
-  m_Name: TestToolA
+  m_Name: DogNoseToolData
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: DogNose
+  <Icon>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: 

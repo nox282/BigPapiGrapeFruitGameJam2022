@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Tool : MonoBehaviour
+public class Tool : DraggableObject
 {
-	[field: SerializeField]
-	public ToolData ToolData { get; private set; }
+    [field: SerializeField]
+    public ToolData ToolData { get; private set; }
 }

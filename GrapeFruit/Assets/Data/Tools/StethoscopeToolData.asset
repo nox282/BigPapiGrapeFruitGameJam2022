@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36e955499678fb244bad6f831a77d957, type: 3}
-  m_Name: ToolASymptom
+  m_Script: {fileID: 11500000, guid: 364a1b07db38cac4994ed430d35817de, type: 3}
+  m_Name: StethoscopeToolData
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Stethoscope
   <Icon>k__BackingField: {fileID: 0}
   <Description>k__BackingField: 
-  <RequiredTool>k__BackingField: {fileID: 11400000, guid: e0cc8f7f914d000409ddb079cc877ac6, type: 2}
