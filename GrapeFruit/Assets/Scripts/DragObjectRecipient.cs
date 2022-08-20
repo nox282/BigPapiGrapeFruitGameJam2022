@@ -5,5 +5,7 @@ public class DragObjectRecipient : MonoBehaviour
     public void OnDraggedOn(DragableObject Object)
     {
         Debug.Log($"Get dragged on scrub {Object.name}");
+
+        // TODO @nox show feedback here.
     }
 }

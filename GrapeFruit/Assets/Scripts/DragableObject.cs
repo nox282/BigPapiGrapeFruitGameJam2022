@@ -36,10 +36,16 @@ public class DragableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             if (dragRecipent != null)
             {
                 dragRecipent.OnDraggedOn(this);
+                OnDragged(dragRecipent);
             }
         }
 
         transform.position = OriginalPosition;
+    }
+
+    protected virtual void OnDragged(DragObjectRecipient Recipient)
+    {
+        // TODO @nox extend tool function here.
     }
 
     // This needs to be implemented along with the DragHandlers, otherwise it seems to lock for no reason
