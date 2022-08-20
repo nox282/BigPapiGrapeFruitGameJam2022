@@ -43,7 +43,7 @@ public class Paw : MonoBehaviour
         transform.position = new Vector3(
             Mathf.Lerp(transform.position.x, endPosition.x, State == PawState.IDLE ? lerpValueIdle : lerpValue),
             Mathf.Lerp(transform.position.y, endPosition.y, State == PawState.IDLE ? lerpValueIdle : lerpValue),
-            0); ;
+            0);
 
         transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(AnchorPos.x - transform.position.x, transform.position.y - AnchorPos.y) * Mathf.Rad2Deg);
 
