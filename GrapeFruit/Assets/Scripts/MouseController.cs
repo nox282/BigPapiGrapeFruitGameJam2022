@@ -61,7 +61,6 @@ public class MouseController : MonoBehaviour
             return;
         }
 
-
         var mouseWorldPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
         var colliders = Physics2D.OverlapPointAll(mouseWorldPosition);
         foreach (var collider in colliders)

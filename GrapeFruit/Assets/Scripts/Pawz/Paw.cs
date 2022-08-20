@@ -109,7 +109,7 @@ public class Paw : MonoBehaviour
 
     private IEnumerator RandomizeIdleOffset()
     {
-        while(true)
+        while (true)
         {
             idleOffset.x = Random.Range(-1f, 1f);
             idleOffset.y = Random.Range(-1f, 1f);

@@ -10,6 +10,8 @@ public class PawsController : MonoBehaviour
 
     public static PawsController Instance;
 
+    public Paw CurrentActivePaw => currentActivePaw;
+
     private void Awake()
     {
         Instance = this;
