@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fc49c40005b93488c74b644e81f3a6, type: 3}
   m_Name: TutorialIllness1
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: 
+  <Icon>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: 
+  <Conversation>k__BackingField: 
+  <Symptoms>k__BackingField: []
+  <Treatments>k__BackingField: []

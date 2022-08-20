@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0957d92ad1073345bd66c0e85701036, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  <Days>k__BackingField: []
+  <Days>k__BackingField:
+  - {fileID: 11400000, guid: ad017802afc7f244886c19d5ef7c3d08, type: 2}
+  - {fileID: 11400000, guid: c19eb6fe09b18bf47b143ae7addccb94, type: 2}
+  - {fileID: 11400000, guid: 1dc38f051dfb88c4d828f06e3bb9649c, type: 2}

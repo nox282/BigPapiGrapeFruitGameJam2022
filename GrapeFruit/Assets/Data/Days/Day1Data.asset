@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Day1Data
   m_EditorClassIdentifier: 
   <Illnesses>k__BackingField: []
+  <MaxTime>k__BackingField: 0
+  <IsTutorial>k__BackingField: 1

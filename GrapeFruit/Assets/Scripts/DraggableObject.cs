@@ -4,8 +4,9 @@ public class DraggableObject : MonoBehaviour
 {
     private Camera MainCamera;
     private Vector3 OriginalPosition;
+    private Paw Paw;
+
     private float OriginalZ;
-    private bool IsBeingDragged = false;
 
     private void Awake()
     {
@@ -14,40 +15,34 @@ public class DraggableObject : MonoBehaviour
         OriginalZ = OriginalPosition.z;
     }
 
-    private void Update()
-    {
-
-    }
-
-    private void FixedUpdate()
-    {
-        if (IsBeingDragged)
-        {
-            var worldPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
-            worldPosition.z = OriginalZ;
-            transform.position = worldPosition;
-        }
-        else
-        {
-            transform.position = OriginalPosition;
-        }
-    }
-
     public void OnBeginDrag()
     {
         Debug.Log($"{gameObject.name}.OnBeginDrag");
-        PawsController.Instance?.SetHoldingObject(true);
-        IsBeingDragged = true;
+
+        if (PawsController.Instance == null || Paw != null)
+        {
+            return;
+        }
+
+        PawsController.Instance.SetHoldingObject(true);
+        Paw = PawsController.Instance.CurrentActivePaw;
     }
 
     public void OnDrag()
     {
-
+        if (Paw != null)
+        {
+            var targetPosition = Paw.transform.position;
+            targetPosition.z = OriginalZ;
+            transform.position = targetPosition;
+        }
     }
 
     public void OnEndDrag()
     {
-        IsBeingDragged = false;
+        Paw = null;
+        transform.position = OriginalPosition;
+
         var worldPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
 
         var colliders = Physics2D.OverlapPointAll(worldPosition);
