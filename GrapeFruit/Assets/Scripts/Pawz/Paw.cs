@@ -50,7 +50,7 @@ public class Paw : MonoBehaviour
         // Wiggle anim on hover
         if (State == PawState.FOLLOWING)
         {
-            var hits = Physics2D.RaycastAll(transform.position, Vector3.forward, 1000);
+            var hits = Physics2D.RaycastAll(CenterPivot.transform.position, Vector3.forward, 1000);
             var foundHit = false;
 
             if (!Input.GetMouseButton(0))
