@@ -1,12 +1,12 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class PanelOpener : MonoBehaviour, IPointerClickHandler
+public class PanelOpener : ClickableObject
 {
     [SerializeField] private UIPanel UIPanel;
 
-    public void OnPointerClick(PointerEventData eventData)
+    public override void OnClicked()
     {
+        base.OnClicked();
         UIPanel.Open();
     }
 }
