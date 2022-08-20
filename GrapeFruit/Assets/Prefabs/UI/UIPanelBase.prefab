@@ -259,7 +259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7828296581892716676}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIPanel, Assembly-CSharp
         m_MethodName: Close
         m_Mode: 1
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 7828296581892716677}
   - component: {fileID: 7828296581892716678}
   - component: {fileID: 7828296581892716679}
-  - component: {fileID: 7828296581892716676}
+  - component: {fileID: -8827153946342294819}
   m_Layer: 5
   m_Name: UIPanelBase
   m_TagString: Untagged
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7828296581892716676
+--- !u!114 &-8827153946342294819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,6 +459,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7828296581892704121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4810f35f9fdec0541ba61953b607a5e6, type: 3}
+  m_Script: {fileID: 11500000, guid: abcb1aebd715bb04381c6c5fc3250fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

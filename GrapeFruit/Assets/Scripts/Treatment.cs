@@ -1,9 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Treatment : MonoBehaviour
+public class Treatment : DraggableObject
 {
-	[field: SerializeField]
-	public ToolData TreatmentData { get; private set; }
+    [field: SerializeField]
+    public TreatmentData TreatmentData { get; private set; }
+
+    protected override void OnDragged(DragObjectRecipient Recipient)
+    {
+        base.OnDragged(Recipient);
+    }
 }

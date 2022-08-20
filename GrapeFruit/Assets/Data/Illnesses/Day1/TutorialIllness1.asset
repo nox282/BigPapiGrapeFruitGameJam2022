@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fc49c40005b93488c74b644e81f3a6, type: 3}
   m_Name: TutorialIllness1
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Illness1
   <Icon>k__BackingField: {fileID: 0}
+  <PatientPrefab>k__BackingField: {fileID: 4752330794262496251, guid: d2a6eeaa7119aa74f90e5abcc40d0e67, type: 3}
   <Description>k__BackingField: 
-  <Conversation>k__BackingField: 
-  <Symptoms>k__BackingField: []
-  <Treatments>k__BackingField: []
+  <Conversation>k__BackingField: Coucou salut, ca va ?
+  <Symptoms>k__BackingField:
+  - {fileID: 11400000, guid: 649370cd6d7838c478b6e57e283c877e, type: 2}
+  <Treatments>k__BackingField:
+  - {fileID: 11400000, guid: b4a16fbc751551c41b6dd5707a14ef62, type: 2}
