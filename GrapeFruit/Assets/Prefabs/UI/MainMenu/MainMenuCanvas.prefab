@@ -888,7 +888,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7829569588230600856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -918,6 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73389f96e2e1e2e47a08cdc2efb7ded7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlaySceneName: 
   PlayButton: {fileID: 7829569587198864236}
   SettingsButton: {fileID: 7829569588650244246}
   HowToPlayButton: {fileID: 7829569588568574795}
@@ -1444,5 +1445,5 @@ SortingGroup:
   m_GameObject: {fileID: 7829569589177655375}
   m_Enabled: 1
   m_SortingLayerID: 116647231
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
