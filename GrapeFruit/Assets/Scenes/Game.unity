@@ -1155,6 +1155,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3320803930587087443, guid: 8ce6d3bc3eef8eb4d88b14bef208f789, type: 3}
+      propertyPath: MaintainOffset
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320803930587087443, guid: 8ce6d3bc3eef8eb4d88b14bef208f789, type: 3}
+      propertyPath: RevertPosition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5428153472659936194, guid: 8ce6d3bc3eef8eb4d88b14bef208f789, type: 3}
       propertyPath: m_Name
       value: BallTreatment
