@@ -2,14 +2,14 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-Grapefruit/[Ll]ibrary/
-Grapefruit/[Tt]emp/
-Grapefruit/[Oo]bj/
-Grapefruit/[Bb]uild/
-Grapefruit/[Bb]uilds/
-Grapefruit/[Ll]ogs/
-Grapefruit/[Mm]emoryCaptures/
-Grapefruit/[Uu]serSettings/
+GrapeFruit/[Ll]ibrary/
+GrapeFruit/[Tt]emp/
+GrapeFruit/[Oo]bj/
+GrapeFruit/[Bb]uild/
+GrapeFruit/[Bb]uilds/
+GrapeFruit/[Ll]ogs/
+GrapeFruit/[Mm]emoryCaptures/
+GrapeFruit/[Uu]serSettings/
 
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
