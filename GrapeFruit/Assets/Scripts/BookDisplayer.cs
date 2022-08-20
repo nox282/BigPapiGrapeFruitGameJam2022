@@ -13,6 +13,8 @@ public class BookDisplayer : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 	private void Awake()
 	{
 		_originalPos = transform.position;
+
+		ToDisplay.SetActive(false);
 	}
 
 	private void OnEnable()
