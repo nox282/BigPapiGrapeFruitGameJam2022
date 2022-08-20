@@ -3,11 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class DayManager : MonoBehaviour
 {
+
+
     [SerializeField] public DayData DefaultDayData;
     [SerializeField] public string EndOfDaySceneName;
     [SerializeField] public TMPro.TMP_Text TimeText;
     [SerializeField] public UIPanel TimerPanel;
     [SerializeField] public Transform PatientAnchor;
+
+    [SerializeField] private BadumController BadumController;
 
     private bool DayStarted;
     private float TimeLeft;
@@ -93,9 +97,52 @@ public class DayManager : MonoBehaviour
         CurrentPatient.transform.SetParent(PatientAnchor);
     }
 
-    public void DisplaySymptomFeedback(SymptomData symptomData)
+    public void OnBeginSymptomFeedback(SymptomData symptomData)
     {
-        Debug.Log($"Symptom feedback {symptomData.Name}");
+        Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
+
+        switch (symptomData.SymptomType)
+        {
+            case SymptomType.Heartbeat:
+                {
+                    BadumController.StartBadum(symptomData.FeedbackFloatValue);
+                    break;
+                }
+
+            case SymptomType.Odor:
+                {
+                    break;
+                }
+
+            default:
+                {
+                    break;
+                }
+        }
+    }
+
+    public void OnEndSymptomFeedback(SymptomData symptomData)
+    {
+        Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
+
+        switch (symptomData.SymptomType)
+        {
+            case SymptomType.Heartbeat:
+                {
+                    BadumController.StopBadum();
+                    break;
+                }
+
+            case SymptomType.Odor:
+                {
+                    break;
+                }
+
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     public void OnSuccesfulTreatment()

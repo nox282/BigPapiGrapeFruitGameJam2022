@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: HighHeartRate
   m_EditorClassIdentifier: 
   <Name>k__BackingField: HighHeartRate
+  <SymptomType>k__BackingField: 0
   <Icon>k__BackingField: {fileID: 0}
   <Description>k__BackingField: High Heart Rate
   <RequiredTool>k__BackingField: {fileID: 11400000, guid: e0cc8f7f914d000409ddb079cc877ac6, type: 2}
+  <FeedbackFloatValue>k__BackingField: 3
