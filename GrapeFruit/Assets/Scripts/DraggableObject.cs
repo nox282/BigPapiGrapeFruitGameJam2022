@@ -111,6 +111,13 @@ public class DraggableObject : MonoBehaviour
             }
         }
 
+        List<DragObjectRecipient> dragObjectRecipientsToRemove = new List<DragObjectRecipient>();
+        foreach (var hoveringDraggableObjects in HoveringDraggableObjects)
+        {
+            hoveringDraggableObjects.OnDraggedOnExit(this);
+        }
+        HoveringDraggableObjects.Clear();
+
         PawsController.Instance?.SetHoldingObject(false);
         Debug.Log($"{gameObject.name}.OnEndDrag");
     }

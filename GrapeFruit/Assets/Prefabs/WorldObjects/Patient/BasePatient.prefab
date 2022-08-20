@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 60b47d0de465fe4469c3e08da8bb5692, type: 3}
-  m_Color: {r: 0.8962264, g: 0.6097308, b: 0.46079564, a: 1}
+  m_Color: {r: 0.3679245, g: 0.19393358, b: 0.13363294, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -91,9 +91,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 122697733548773840, guid: 99ab6d3617f97414782e7ec5dc8a2e22, type: 3}
+      propertyPath: m_Size.x
+      value: 3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 122697733548773840, guid: 99ab6d3617f97414782e7ec5dc8a2e22, type: 3}
+      propertyPath: m_Size.y
+      value: 4.78
+      objectReference: {fileID: 0}
     - target: {fileID: 1918412499615103001, guid: 99ab6d3617f97414782e7ec5dc8a2e22, type: 3}
       propertyPath: m_Name
-      value: Patient2
+      value: BasePatient
       objectReference: {fileID: 0}
     - target: {fileID: 1918412499615103015, guid: 99ab6d3617f97414782e7ec5dc8a2e22, type: 3}
       propertyPath: m_RootOrder
@@ -183,4 +191,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac37884ef0163946a79be26503c1e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IllnessData>k__BackingField: {fileID: 11400000, guid: 6fee62d375537ce428b8270f6899edd5, type: 2}
+  <IllnessData>k__BackingField: {fileID: 11400000, guid: 64d5356bc1afb1c47a32b6beef698f24, type: 2}

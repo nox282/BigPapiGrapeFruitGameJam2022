@@ -3,15 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class DayManager : MonoBehaviour
 {
-    private const string kIsBeatingString = "IsBeating";
-    private static int kIsBeatingHash = Animator.StringToHash(kIsBeatingString);
+
 
     [SerializeField] public DayData DefaultDayData;
     [SerializeField] public string EndOfDaySceneName;
     [SerializeField] public TMPro.TMP_Text TimeText;
     [SerializeField] public UIPanel TimerPanel;
     [SerializeField] public Transform PatientAnchor;
-    [SerializeField] private Animator BadumAnimatorController;
+
+    [SerializeField] private BadumController BadumController;
 
     private bool DayStarted;
     private float TimeLeft;
@@ -105,8 +105,7 @@ public class DayManager : MonoBehaviour
         {
             case SymptomType.Heartbeat:
                 {
-                    BadumAnimatorController.SetBool(kIsBeatingHash, true);
-                    BadumAnimatorController.speed = symptomData.FeedbackFloatValue;
+                    BadumController.StartBadum(symptomData.FeedbackFloatValue);
                     break;
                 }
 
@@ -130,8 +129,7 @@ public class DayManager : MonoBehaviour
         {
             case SymptomType.Heartbeat:
                 {
-                    BadumAnimatorController.SetBool(kIsBeatingHash, false);
-                    BadumAnimatorController.speed = 1;
+                    BadumController.StopBadum();
                     break;
                 }
 
