@@ -43,11 +43,54 @@ public class Patient : DragObjectRecipient
 
             case Tool tool:
                 {
+                    break;
+                }
+        }
+    }
+
+    public override void OnDraggedOnEnter(DraggableObject DraggedObject)
+    {
+        Debug.Log($"{DraggedObject.name} OnDraggedOnEnter {gameObject.name}");
+
+        switch (DraggedObject)
+        {
+            case Treatment treatment:
+                {
+                    break;
+                }
+
+            case Tool tool:
+                {
                     foreach (var symptom in IllnessData.Symptoms)
                     {
                         if (symptom.RequiredTool == tool.ToolData)
                         {
-                            DayManager.DisplaySymptomFeedback(symptom);
+                            DayManager.OnBeginSymptomFeedback(symptom);
+                        }
+                    }
+                    break;
+                }
+        }
+    }
+
+    public override void OnDraggedOnExit(DraggableObject DraggedObject)
+    {
+        Debug.Log($"{DraggedObject.name} OnDraggedOnExit {gameObject.name}");
+
+        switch (DraggedObject)
+        {
+            case Treatment treatment:
+                {
+                    break;
+                }
+
+            case Tool tool:
+                {
+                    foreach (var symptom in IllnessData.Symptoms)
+                    {
+                        if (symptom.RequiredTool == tool.ToolData)
+                        {
+                            DayManager.OnEndSymptomFeedback(symptom);
                         }
                     }
                     break;

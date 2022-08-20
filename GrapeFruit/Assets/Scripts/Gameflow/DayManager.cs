@@ -3,11 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class DayManager : MonoBehaviour
 {
+    private const string kIsBeatingString = "IsBeating";
+    private static int kIsBeatingHash = Animator.StringToHash(kIsBeatingString);
+
     [SerializeField] public DayData DefaultDayData;
     [SerializeField] public string EndOfDaySceneName;
     [SerializeField] public TMPro.TMP_Text TimeText;
     [SerializeField] public UIPanel TimerPanel;
     [SerializeField] public Transform PatientAnchor;
+    [SerializeField] private Animator BadumAnimatorController;
 
     private bool DayStarted;
     private float TimeLeft;
@@ -93,9 +97,54 @@ public class DayManager : MonoBehaviour
         CurrentPatient.transform.SetParent(PatientAnchor);
     }
 
-    public void DisplaySymptomFeedback(SymptomData symptomData)
+    public void OnBeginSymptomFeedback(SymptomData symptomData)
     {
-        Debug.Log($"Symptom feedback {symptomData.Name}");
+        Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
+
+        switch (symptomData.SymptomType)
+        {
+            case SymptomType.Heartbeat:
+                {
+                    BadumAnimatorController.SetBool(kIsBeatingHash, true);
+                    BadumAnimatorController.speed = symptomData.FeedbackFloatValue;
+                    break;
+                }
+
+            case SymptomType.Odor:
+                {
+                    break;
+                }
+
+            default:
+                {
+                    break;
+                }
+        }
+    }
+
+    public void OnEndSymptomFeedback(SymptomData symptomData)
+    {
+        Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
+
+        switch (symptomData.SymptomType)
+        {
+            case SymptomType.Heartbeat:
+                {
+                    BadumAnimatorController.SetBool(kIsBeatingHash, false);
+                    BadumAnimatorController.speed = 1;
+                    break;
+                }
+
+            case SymptomType.Odor:
+                {
+                    break;
+                }
+
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     public void OnSuccesfulTreatment()
