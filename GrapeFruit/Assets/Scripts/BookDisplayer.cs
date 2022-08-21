@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class BookDisplayer : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
@@ -9,6 +8,7 @@ public class BookDisplayer : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     public Vector3 Offset;
     private Vector3 _originalPos;
 
+    public UnityEvent OnClicked;
 
     private void Awake()
     {
@@ -26,6 +26,7 @@ public class BookDisplayer : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     {
         ToDisplay.SetActive(true);
         gameObject.SetActive(false);
+        OnClicked.Invoke();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

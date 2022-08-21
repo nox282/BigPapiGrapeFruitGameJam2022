@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,7 @@ public class DayManager : MonoBehaviour
     [SerializeField] private SmellController SmellController;
     [SerializeField] private TreatmentsRespawner TreatmentsRespawner;
     [SerializeField] private DayMusicPlayer DayMusicPlayer;
+    [SerializeField] private BarkSFXController BarkSFXController;
 
     private bool DayStarted;
     private float TimeLeft;
@@ -183,6 +185,7 @@ public class DayManager : MonoBehaviour
     public void OnSuccesfulTreatment()
     {
         Debug.Log($"Patient {CurrentPatient.name} treated.");
+        BarkSFXController.Bark();
         DismissPatient();
     }
 
@@ -214,5 +217,13 @@ public class DayManager : MonoBehaviour
 
         var timeSpent = CurrentDayData.MaxTime - TimeLeft;
         return timeSpent / CurrentDayData.MaxTime;
+    }
+
+    private IEnumerator DismissPatientRoutine()
+    {
+        yield return null;
+
+        Destroy(CurrentPatient.gameObject);
+        TreatmentsRespawner.OnPatientDestroyed();
     }
 }
