@@ -187,7 +187,6 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
             }
 
             transform.localScale = v;
-            Debug.Log(v);
 
             yield return null;
         }
