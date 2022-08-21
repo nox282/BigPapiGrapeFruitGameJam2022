@@ -1605,6 +1605,8 @@ MonoBehaviour:
   TreatmentsRespawner: {fileID: 1074371262}
   DayMusicPlayer: {fileID: 1074371264}
   BarkSFXController: {fileID: 25858516}
+  SniffTool: {fileID: 11400000, guid: 32c84a425219c5b428c205232ab89d9c, type: 2}
+  HeartTool: {fileID: 11400000, guid: e0cc8f7f914d000409ddb079cc877ac6, type: 2}
 --- !u!4 &1074371261
 Transform:
   m_ObjectHideFlags: 0

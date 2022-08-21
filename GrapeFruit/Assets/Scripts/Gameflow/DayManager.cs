@@ -18,7 +18,10 @@ public class DayManager : MonoBehaviour
     [SerializeField] private DayMusicPlayer DayMusicPlayer;
     [SerializeField] private BarkSFXController BarkSFXController;
 
-    private bool DayStarted;
+	[SerializeField] private ToolData SniffTool;
+	[SerializeField] private ToolData HeartTool;
+
+	private bool DayStarted;
     private float TimeLeft;
     private int PatientIndex;
 
@@ -136,50 +139,28 @@ public class DayManager : MonoBehaviour
     {
         Debug.Log($"OnBeginSymptomFeedback {symptomData.name}");
 
-        switch (symptomData.SymptomType)
-        {
-            case SymptomType.Heartbeat:
-                {
-                    BadumController.StartBadum(symptomData.FeedbackFloatValue);
-                    break;
-                }
-
-            case SymptomType.Odor:
-                {
-                    SmellController.StartSmelling(symptomData.Description);
-                    break;
-                }
-
-            default:
-                {
-                    break;
-                }
-        }
+		if(symptomData.RequiredTool == SniffTool)
+		{
+			SmellController.StartSmelling(symptomData.Description);
+		}
+		else if(symptomData.RequiredTool == HeartTool)
+		{
+			BadumController.StartBadum(symptomData.FeedbackFloatValue);
+		}
     }
 
     public void OnEndSymptomFeedback(SymptomData symptomData)
     {
         Debug.Log($"OnBeginSymptomFeedback {symptomData.name}");
 
-        switch (symptomData.SymptomType)
-        {
-            case SymptomType.Heartbeat:
-                {
-                    BadumController.StopBadum();
-                    break;
-                }
-
-            case SymptomType.Odor:
-                {
-                    SmellController.StopSmelling();
-                    break;
-                }
-
-            default:
-                {
-                    break;
-                }
-        }
+		if (symptomData.RequiredTool == SniffTool)
+		{
+			SmellController.StopSmelling();
+		}
+		else if (symptomData.RequiredTool == HeartTool)
+		{
+			BadumController.StopBadum();
+		}
     }
 
     public void OnSuccesfulTreatment()
