@@ -83,11 +83,12 @@ public class DayManager : MonoBehaviour
             TimeLeft = CurrentDayData.MaxTime;
         }
 
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.HeartFeedbackCount = 0;
-            GameManager.Instance.AngryFeedbackCount = 0;
-        }
+        // Aumni made me do it.
+        // if (GameManager.Instance != null)
+        // {
+        //     GameManager.Instance.HeartFeedbackCount = 0;
+        //     GameManager.Instance.AngryFeedbackCount = 0;
+        // }
     }
 
     public void StopDay()
