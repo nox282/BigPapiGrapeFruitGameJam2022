@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Day2Data
   m_EditorClassIdentifier: 
   <Illnesses>k__BackingField:
-  - {fileID: 11400000, guid: b3ca76f9ab7fb8b4f9627a4e8e5a69e3, type: 2}
   - {fileID: 11400000, guid: 1f5460c29a60898479a116f02c13767a, type: 2}
+  - {fileID: 11400000, guid: b3ca76f9ab7fb8b4f9627a4e8e5a69e3, type: 2}
+  - {fileID: 11400000, guid: ae7669babcc23ad48bbf29b8327efda3, type: 2}
+  - {fileID: 11400000, guid: 6b213655e226b2240bbcc1449dc29038, type: 2}
+  - {fileID: 11400000, guid: 4689ab2dadfc0074f93a0df1a773df64, type: 2}
   <MaxTime>k__BackingField: 120
   <IsTutorial>k__BackingField: 0
   <Music>k__BackingField: {fileID: 8300000, guid: 491c75787abfec9449fa5f75cf5ec9ac, type: 3}
