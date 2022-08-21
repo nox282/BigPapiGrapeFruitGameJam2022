@@ -1286,7 +1286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544155521475875032, guid: 3aaa899265964104c9515742a9bbb6e5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 255.51001
+      value: 306
       objectReference: {fileID: 0}
     - target: {fileID: 544155521475875032, guid: 3aaa899265964104c9515742a9bbb6e5, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2079,7 +2079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:00
+  m_text: 'Time left: 000:00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 590ec71fd944f2d418ebacb94c16eadc, type: 2}
   m_sharedMaterial: {fileID: 3365336611369087193, guid: 590ec71fd944f2d418ebacb94c16eadc, type: 2}
