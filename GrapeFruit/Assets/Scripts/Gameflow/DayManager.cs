@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class DayManager : MonoBehaviour
 {
-
-
     [SerializeField] public DayData DefaultDayData;
     [SerializeField] public string EndOfDaySceneName;
     [SerializeField] public TMPro.TMP_Text TimeText;
@@ -12,6 +10,7 @@ public class DayManager : MonoBehaviour
     [SerializeField] public Transform PatientAnchor;
 
     [SerializeField] private BadumController BadumController;
+    [SerializeField] private SmellController SmellController;
 
     private bool DayStarted;
     private float TimeLeft;
@@ -111,6 +110,7 @@ public class DayManager : MonoBehaviour
 
             case SymptomType.Odor:
                 {
+                    SmellController.StartSmelling();
                     break;
                 }
 
@@ -135,6 +135,7 @@ public class DayManager : MonoBehaviour
 
             case SymptomType.Odor:
                 {
+                    SmellController.StopSmelling();
                     break;
                 }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ public class Nose : MonoBehaviour
     private const float lerpValue = .1f;
     private const float lerpValueIdle = .05f;
     private const float shakeTotalTime = .5f;
+
+    public event Action<NoseState> OnStateChanged;
 
     public enum NoseState
     {
@@ -34,7 +37,7 @@ public class Nose : MonoBehaviour
 
         if (shakeTimer > 0)
         {
-            Vector3 randomOffset = Random.insideUnitSphere;
+            Vector3 randomOffset = UnityEngine.Random.insideUnitSphere;
             endPosition.x += randomOffset.x * .5f;
             endPosition.y += randomOffset.y * .5f;
             shakeTimer -= Time.deltaTime;
@@ -68,6 +71,7 @@ public class Nose : MonoBehaviour
         }
 
         State = newState;
+        OnStateChanged?.Invoke(State);
 
         switch (State)
         {
@@ -87,7 +91,7 @@ public class Nose : MonoBehaviour
         {
             Shake();
 
-            yield return new WaitForSeconds(Random.Range(3f, 7f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(3f, 7f));
         }
     }
 }

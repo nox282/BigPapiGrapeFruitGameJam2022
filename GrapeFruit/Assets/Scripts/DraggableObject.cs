@@ -54,10 +54,46 @@ public class DraggableObject : MonoBehaviour
 
         transform.position = targetPosition;
 
-        var worldPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
+        HandleOnDragRecipients();
+    }
 
+    public void OnEndDrag()
+    {
+        Paw = null;
+        if (RevertPosition)
+        {
+            transform.position = OriginalPosition;
+        }
+
+        HandleOnEndDragRecipients();
+
+        var screenPos = MainCamera.WorldToScreenPoint(transform.position);
+        var newPos = screenPos;
+
+        newPos.x = screenPos.x < 0 ? 0 : newPos.x;
+        newPos.y = screenPos.y < 0 ? 0 : newPos.y;
+
+        newPos.x = screenPos.x > Screen.width ? Screen.width : newPos.x;
+        newPos.y = screenPos.y > Screen.height ? Screen.height : newPos.y;
+
+        newPos = MainCamera.ScreenToWorldPoint(newPos);
+
+        transform.position = newPos;
+
+        PawsController.Instance?.SetHoldingObject(false);
+        Debug.Log($"{gameObject.name}.OnEndDrag");
+    }
+
+    protected virtual void OnDragged(DragObjectRecipient Recipient)
+    {
+        // TODO @nox extend tool function here.
+    }
+
+    protected virtual void HandleOnDragRecipients()
+    {
         // fuck this piece of code.
         // Handle on object enter/exit
+        var worldPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
         List<DragObjectRecipient> stillHoveringDragObjectRecipients = new List<DragObjectRecipient>();
         var colliders = Physics2D.OverlapPointAll(worldPosition);
         foreach (var collider in colliders)
@@ -90,16 +126,9 @@ public class DraggableObject : MonoBehaviour
         }
     }
 
-    public void OnEndDrag()
+    protected virtual void HandleOnEndDragRecipients()
     {
-        Paw = null;
-        if (RevertPosition)
-        {
-            transform.position = OriginalPosition;
-        }
-
         var worldPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
-
         var colliders = Physics2D.OverlapPointAll(worldPosition);
         foreach (var collider in colliders)
         {
@@ -117,25 +146,5 @@ public class DraggableObject : MonoBehaviour
             hoveringDraggableObjects.OnDraggedOnExit(this);
         }
         HoveringDraggableObjects.Clear();
-
-		var screenPos = MainCamera.WorldToScreenPoint(transform.position);
-		var newPos = screenPos;
-
-		newPos.x = screenPos.x < 0 ? 0 : newPos.x;
-		newPos.y = screenPos.y < 0 ? 0 : newPos.y;
-
-		newPos.x = screenPos.x > Screen.width ? Screen.width : newPos.x;
-		newPos.y = screenPos.y > Screen.height ? Screen.height : newPos.y;
-
-		newPos = MainCamera.ScreenToWorldPoint(newPos);
-		transform.position = newPos;
-		
-		PawsController.Instance?.SetHoldingObject(false);
-        Debug.Log($"{gameObject.name}.OnEndDrag");
-    }
-
-    protected virtual void OnDragged(DragObjectRecipient Recipient)
-    {
-        // TODO @nox extend tool function here.
     }
 }
