@@ -16,9 +16,11 @@ public class ConversationPanel : UIPanel
 	private Queue<string> _toDisplay = new Queue<string>();
 
 	private float _counter;
+	public bool HasDialog { get; private set; }
 
 	public void AddDialog(string dialog)
 	{
+		HasDialog = true;
 		_toDisplay.Enqueue(dialog);
 	}
 
@@ -37,6 +39,7 @@ public class ConversationPanel : UIPanel
 		}
 		else
 		{
+			HasDialog = false;
 			Close();
 			_counter = 0;
 		}

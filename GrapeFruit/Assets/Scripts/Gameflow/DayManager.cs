@@ -105,7 +105,15 @@ public class DayManager : MonoBehaviour
 
 	private void OnPatPatient()
 	{
-		ConversationPanel.ShowNext();
+		if(ConversationPanel.HasDialog)
+		{
+			ConversationPanel.ShowNext();
+		}
+		else
+		{
+			ConversationPanel.AddDialog(CurrentPatient.IllnessData.Conversation);
+			ConversationPanel.ShowNext();
+		}
 	}
 
 	public void OnBeginSymptomFeedback(SymptomData symptomData)
