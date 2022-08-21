@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public DayData GetCurentDatData()
+    public DayData GetCurentDayData()
     {
         if (DayIndex < 0 || DayIndex >= GameData.Days.Length)
         {

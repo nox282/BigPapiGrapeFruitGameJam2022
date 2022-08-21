@@ -3,17 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class DayManager : MonoBehaviour
 {
-
-
     [SerializeField] public DayData DefaultDayData;
     [SerializeField] public string EndOfDaySceneName;
     [SerializeField] public TMPro.TMP_Text TimeText;
     [SerializeField] public UIPanel TimerPanel;
     [SerializeField] public Transform PatientAnchor;
+	[SerializeField] public ConversationPanel ConversationPanel;
 
-    [SerializeField] private BadumController BadumController;
+	[SerializeField] private BadumController BadumController;
+	[SerializeField] private IntroDialogData IntroDialogData;
 
-    private bool DayStarted;
+	private bool DayStarted;
     private float TimeLeft;
 
     private DayData CurrentDayData;
@@ -23,7 +23,7 @@ public class DayManager : MonoBehaviour
     {
         if (GameManager.Instance != null)
         {
-            CurrentDayData = GameManager.Instance.GetCurentDatData();
+            CurrentDayData = GameManager.Instance.GetCurentDayData();
         }
         else
         {
@@ -95,9 +95,19 @@ public class DayManager : MonoBehaviour
         CurrentPatient = GameObject.Instantiate<Patient>(illnessData.PatientPrefab);
         CurrentPatient.OnSpawned(this, illnessData);
         CurrentPatient.transform.SetParent(PatientAnchor);
-    }
 
-    public void OnBeginSymptomFeedback(SymptomData symptomData)
+		// generic patient arrival dialog
+		ConversationPanel.AddDialog(IntroDialogData.GetRandomArrivalDialog());
+		ConversationPanel.ShowNext();
+		CurrentPatient.OnPat += OnPatPatient;
+	}
+
+	private void OnPatPatient()
+	{
+		ConversationPanel.ShowNext();
+	}
+
+	public void OnBeginSymptomFeedback(SymptomData symptomData)
     {
         Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
 
@@ -154,7 +164,8 @@ public class DayManager : MonoBehaviour
     // :oronuke:
     public void DismissPatient()
     {
-        // TODO play the animation before.
-        Destroy(CurrentPatient.gameObject);
+		// TODO play the animation before.
+		CurrentPatient.OnPat -= OnPatPatient;
+		Destroy(CurrentPatient.gameObject);
     }
 }

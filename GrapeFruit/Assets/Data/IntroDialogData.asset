@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2afa6e966e5f045bb63cb1d8401ec7, type: 3}
+  m_Name: IntroDialogData
+  m_EditorClassIdentifier: 
+  <GenericArrivalDialogs>k__BackingField:
+  - "Hey doc! What\u2019s up?"
+  - "Doctor please, I\u2019m in dire need of treatment!"
+  - "Boy, ho boy, do I have something gross to show you! You won\u2019t be disappointed!"
+  - Nyello there!
+  - "There are so many things wrong with me, you\u2019d be better off asking me what\u2019s
+    right!"
+  - Bruv, check me out.
+  - Hello.
+  - I now appear before you. Witness me.
+  - "ACHOOO! Oof, sorry Doc, I\u2019m terribly allergic to dogs. You wouldn\u2019t
+    happen to have one?"
+  - I am here at this very moment and require your services. Will you provide me
+    with them?
+  - 01000010 01101111 01101110 01101010 01101111 01110101 01110010 00100001
+  - "You\u2019re the first doctor I see in 25 years. I don\u2019t trust any of them\u2026
+    Last time I saw one, it turned out to be 3 fish on top of each other in a lab
+    coat!"
+  - "Our encounter was fated a long time ago, doctor, when you told me that you would
+    see me again in a month\u2026 A month ago."
+  - "Doc, your office kind of smells like a wet dog\u2026"
+  - "Dappledee, dappledoo, I\u2019ve been generated before you!"
+  - "Hey Doc! Did you know that dog prison was a thing? Yeah! That\u2019s where they
+    send bad dogs who impersonate doctors and lawyers and such. Just a fun fact I
+    learned recently!"
+  - '[I AM ERROR]'
+  - "All your treats are belong to us! Hahaha just kidding, Doc. I know you\u2019re
+    not a dog!"
