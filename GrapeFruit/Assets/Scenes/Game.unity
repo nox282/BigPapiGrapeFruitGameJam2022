@@ -377,6 +377,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &214102687 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7533741760634904969, guid: e6276b778e5e8e340b7025798a09edc5, type: 3}
+  m_PrefabInstance: {fileID: 1372956495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e29100a224b5b4da39164bad40f80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &231718452 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7828296581892704120, guid: 92a8ade6a868cfe448dc3f4e48d74e71, type: 3}
@@ -1113,6 +1124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074371261}
   - component: {fileID: 1074371260}
+  - component: {fileID: 1074371262}
   m_Layer: 0
   m_Name: DayManager
   m_TagString: Untagged
@@ -1141,6 +1153,7 @@ MonoBehaviour:
   BadumController: {fileID: 1537530796}
   IntroDialogData: {fileID: 11400000, guid: 2db2a305d46d5d84b8988ea8127e6aef, type: 2}
   SmellController: {fileID: 1760507817}
+  TreatmentsRespawner: {fileID: 1074371262}
 --- !u!4 &1074371261
 Transform:
   m_ObjectHideFlags: 0
@@ -1156,6 +1169,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1074371262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074371259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de6c5ea758139348896f63391c5b9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Treatments:
+  - {fileID: 1531053123}
+  - {fileID: 214102687}
 --- !u!1 &1144051191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6342997733100889067, guid: db7dafaf640e6b64191cc606c4d0f5ff, type: 3}
@@ -1751,7 +1779,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 994252567506907160, guid: e6276b778e5e8e340b7025798a09edc5, type: 3}
       propertyPath: m_Name
-      value: TreatmentBase Variant
+      value: LeashTreatment
       objectReference: {fileID: 0}
     - target: {fileID: 994252567506907174, guid: e6276b778e5e8e340b7025798a09edc5, type: 3}
       propertyPath: m_RootOrder
@@ -1953,6 +1981,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce6d3bc3eef8eb4d88b14bef208f789, type: 3}
+--- !u!114 &1531053123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320803930587087443, guid: 8ce6d3bc3eef8eb4d88b14bef208f789, type: 3}
+  m_PrefabInstance: {fileID: 1487125422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e29100a224b5b4da39164bad40f80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1537530791 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7421875740122406779, guid: 5b2e6428f78a3ce4bbd78ca55be54bac, type: 3}

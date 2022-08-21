@@ -6,18 +6,18 @@ using UnityEngine.EventSystems;
 
 public class Patient : DragObjectRecipient, IPointerClickHandler
 {
-	public float PatMaxTime = 1f;
-	public int PatAmount = 2;
+    public float PatMaxTime = 1f;
+    public int PatAmount = 2;
     [field: SerializeField] public IllnessData IllnessData { get; private set; }
 
     private List<TreatmentData> ExpectedTreatments = new List<TreatmentData>();
 
-	public Action OnPat;
+    public Action OnPat;
 
     private DayManager DayManager;
-	private int _patCount = 0;
-	private float _patTimer = 0;
-    
+    private int _patCount = 0;
+    private float _patTimer = 0;
+
     private float _jumpTimer;
 
     private const float jumpTotalTime = .2f;
@@ -45,6 +45,7 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
                     if (treatmentIndex >= 0)
                     {
                         ExpectedTreatments.RemoveAt(treatmentIndex);
+                        treatment.OnUsed();
 
                         if (ExpectedTreatments.Count <= 0)
                         {
@@ -111,33 +112,33 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
         }
     }
 
-	public void OnPointerClick(PointerEventData eventData)
-	{
-		_patCount++;
-		
-		if(_patCount >= PatAmount)
-		{
-			_patCount = 0;
-			
-			OnPat?.Invoke();
-		}
-	}
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        _patCount++;
 
-	private void Update()
-	{
-		if(_patCount > 0)
-		{
-			_patTimer -= Time.deltaTime;
-			if(_patTimer <= 0f)
-			{
-				_patCount = 0;
-			}
-		}
-		else
-		{
-			_patTimer = PatMaxTime;
-		}
-	}
+        if (_patCount >= PatAmount)
+        {
+            _patCount = 0;
+
+            OnPat?.Invoke();
+        }
+    }
+
+    private void Update()
+    {
+        if (_patCount > 0)
+        {
+            _patTimer -= Time.deltaTime;
+            if (_patTimer <= 0f)
+            {
+                _patCount = 0;
+            }
+        }
+        else
+        {
+            _patTimer = PatMaxTime;
+        }
+    }
 
     public void StartJump()
     {
@@ -165,7 +166,7 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
                 float t = Mathf.Abs(_jumpTimer - jumpTotalTime) / half;
                 v.x = 1 + (t * xOffset);
                 v.y = 1 + (t * yOffset);
-            } 
+            }
             else
             {
                 float t = Mathf.Abs(_jumpTimer - half) / half;

@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6385bdde0655f7b4c833247431acaf8d, type: 2}
     - target: {fileID: 4969290099359069851, guid: f3aec179485a48b49ae277ba0a75b730, type: 3}
       propertyPath: m_Name
-      value: TreatmentBase Variant
+      value: LeashTreatment
       objectReference: {fileID: 0}
     - target: {fileID: 4969290099359069861, guid: f3aec179485a48b49ae277ba0a75b730, type: 3}
       propertyPath: m_RootOrder

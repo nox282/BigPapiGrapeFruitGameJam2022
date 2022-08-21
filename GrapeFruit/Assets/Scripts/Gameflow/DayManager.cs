@@ -13,6 +13,7 @@ public class DayManager : MonoBehaviour
     [SerializeField] private BadumController BadumController;
     [SerializeField] private IntroDialogData IntroDialogData;
     [SerializeField] private SmellController SmellController;
+    [SerializeField] private TreatmentsRespawner TreatmentsRespawner;
 
     private bool DayStarted;
     private float TimeLeft;
@@ -109,6 +110,8 @@ public class DayManager : MonoBehaviour
         ConversationPanel.AddDialog(IntroDialogData.GetRandomArrivalDialog());
         ConversationPanel.ShowNext();
         CurrentPatient.OnPat += OnPatPatient;
+
+        TreatmentsRespawner.OnPatientSpawned();
     }
 
     private void OnPatPatient()
@@ -186,6 +189,7 @@ public class DayManager : MonoBehaviour
         // TODO play the animation before.
         CurrentPatient.OnPat -= OnPatPatient;
         Destroy(CurrentPatient.gameObject);
+        TreatmentsRespawner.OnPatientDestroyed();
     }
 
 }
