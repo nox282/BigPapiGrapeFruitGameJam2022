@@ -1,7 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class Patient : DragObjectRecipient, IPointerClickHandler
@@ -17,6 +17,10 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
     private DayManager DayManager;
 	private int _patCount = 0;
 	private float _patTimer = 0;
+    
+    private float _jumpTimer;
+
+    private const float jumpTotalTime = .2f;
 
     public void OnSpawned(DayManager dayManager, IllnessData illnessData)
     {
@@ -134,4 +138,47 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
 			_patTimer = PatMaxTime;
 		}
 	}
+
+    public void StartJump()
+    {
+        if (_jumpTimer <= 0)
+        {
+            StartCoroutine(Jump());
+        }
+    }
+
+    private IEnumerator Jump()
+    {
+        _jumpTimer = jumpTotalTime;
+        Vector3 v = new Vector3(1f, 1f, 1f);
+        float half = jumpTotalTime / 2f;
+
+        float xOffset = -0.1f;
+        float yOffset = 0.1f;
+
+        while (_jumpTimer > 0)
+        {
+            _jumpTimer -= Time.deltaTime;
+
+            if (_jumpTimer > half)
+            {
+                float t = Mathf.Abs(_jumpTimer - jumpTotalTime) / half;
+                v.x = 1 + (t * xOffset);
+                v.y = 1 + (t * yOffset);
+            } 
+            else
+            {
+                float t = Mathf.Abs(_jumpTimer - half) / half;
+                v.x = 1 + xOffset - (t * xOffset);
+                v.y = 1 + yOffset - (t * yOffset);
+            }
+
+            transform.localScale = v;
+            Debug.Log(v);
+
+            yield return null;
+        }
+
+        transform.localScale = new Vector3(1, 1, 1);
+    }
 }

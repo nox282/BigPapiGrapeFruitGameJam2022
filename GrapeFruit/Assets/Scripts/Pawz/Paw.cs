@@ -77,6 +77,20 @@ public class Paw : MonoBehaviour
                 Hand.transform.localScale = new Vector3(v, v, v);
             }
         }
+
+        // Person click
+        if (Input.GetMouseButtonDown(0))
+        {
+            var hits = Physics2D.RaycastAll(CenterPivot.transform.position, Vector3.forward, 1000);
+            foreach (var hit in hits)
+            {
+                Patient patient = hit.transform.GetComponent<Patient>();
+                if (patient != null)
+                {
+                    patient.StartJump();
+                }
+            }
+        }
     }
 
     public void SetState(PawState newState)
