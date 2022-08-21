@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Day2Data
   m_EditorClassIdentifier: 
   <Illnesses>k__BackingField: []
+  <MaxTime>k__BackingField: 120
+  <IsTutorial>k__BackingField: 0
+  <Music>k__BackingField: {fileID: 8300000, guid: 491c75787abfec9449fa5f75cf5ec9ac, type: 3}
+  <MusicFast>k__BackingField: {fileID: 8300000, guid: 3895cec9e32e0fb45a6ff2e7e1749341, type: 3}
+  <MusicFastest>k__BackingField: {fileID: 8300000, guid: 310404b55a9f294448644784fe35be22, type: 3}

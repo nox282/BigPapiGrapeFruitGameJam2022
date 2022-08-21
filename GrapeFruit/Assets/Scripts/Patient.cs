@@ -10,6 +10,8 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
     public int PatAmount = 2;
     [field: SerializeField] public IllnessData IllnessData { get; private set; }
 
+    [field: SerializeField] public AudioSource SittingDownSFX { get; private set; }
+
     private List<TreatmentData> ExpectedTreatments = new List<TreatmentData>();
 
     public Action OnPat;
@@ -181,5 +183,10 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
         }
 
         transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    public void PlaySittingDownSFX()
+    {
+        SittingDownSFX.Play();
     }
 }

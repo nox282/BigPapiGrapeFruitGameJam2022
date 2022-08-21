@@ -8,6 +8,7 @@ public class Nose : MonoBehaviour
     private static int kIsWiggleHash = Animator.StringToHash(kIsWiggleString);
 
     [SerializeField] private Animator AnimatorController;
+    [SerializeField] private AudioSource SniffSFX;
 
     public NoseState State;
     public Vector3 AnchorPos;
@@ -68,7 +69,7 @@ public class Nose : MonoBehaviour
         {
             Vector3 bottomMid = new Vector3(0.5f, 0, 0);
             viewportPos = bottomMid + (viewportPos - bottomMid).normalized * clampPos;
-        } 
+        }
 
         var cameraPos = Camera.main.ViewportToWorldPoint(viewportPos);
         gotoPosition = cameraPos;
@@ -95,9 +96,11 @@ public class Nose : MonoBehaviour
             case NoseState.IDLE:
                 gotoPosition = initialPosition;
                 AnimatorController.SetBool(kIsWiggleHash, false);
+                SniffSFX.Stop();
                 break;
             case NoseState.FOLLOWING:
                 AnimatorController.SetBool(kIsWiggleHash, true);
+                SniffSFX.Play();
                 break;
             default:
                 break;
