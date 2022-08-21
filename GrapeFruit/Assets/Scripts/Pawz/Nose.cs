@@ -19,6 +19,7 @@ public class Nose : MonoBehaviour
     private const float lerpValue = .1f;
     private const float lerpValueIdle = .05f;
     private const float shakeTotalTime = .5f;
+    private const float clampPos = .5f;
 
     public event Action<NoseState> OnStateChanged;
 
@@ -58,6 +59,13 @@ public class Nose : MonoBehaviour
 
     public void Follow(Vector3 viewportPos)
     {
+        // Clamp
+        if ((viewportPos - new Vector3(0.5f, 0, 0)).magnitude > clampPos)
+        {
+            Vector3 bottomMid = new Vector3(0.5f, 0, 0);
+            viewportPos = bottomMid + (viewportPos - bottomMid).normalized * clampPos;
+        } 
+
         var cameraPos = Camera.main.ViewportToWorldPoint(viewportPos);
         gotoPosition = cameraPos;
         gotoPosition.z = 0;
