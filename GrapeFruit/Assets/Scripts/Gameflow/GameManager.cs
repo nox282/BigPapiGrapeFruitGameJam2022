@@ -17,11 +17,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            throw new System.Exception("Shit happened yo.");
-        }
-
         Instance = this;
         DontDestroyOnLoad(this);
     }

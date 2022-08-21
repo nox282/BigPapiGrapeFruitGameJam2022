@@ -6,8 +6,10 @@ public class UIEndOfDay : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private TMPro.TMP_Text Text;
     [SerializeField] private string GameSceneName;
+    [SerializeField] private string EndOfGameSceneName;
     [SerializeField] private float MaxDisplayTime;
     [SerializeField] private float MinDisplayTime;
+
 
     [SerializeField] private TMPro.TMP_Text HeartFeedbackCounterText;
     [SerializeField] private TMPro.TMP_Text AngryFeedbackCounterText;
@@ -45,7 +47,20 @@ public class UIEndOfDay : MonoBehaviour, IPointerClickHandler
 
     public void NextDay()
     {
-        SceneManager.LoadScene(GameSceneName);
+        if (GameManager.Instance == null)
+        {
+            SceneManager.LoadScene(GameSceneName);
+            return;
+        }
+
+        if (GameManager.Instance.GetCurrentDayIndex() >= GameManager.Instance.GameData.Days.Length)
+        {
+            SceneManager.LoadScene(EndOfGameSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(GameSceneName);
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)

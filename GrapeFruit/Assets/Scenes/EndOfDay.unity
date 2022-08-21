@@ -501,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 46458915}
   GameSceneName: Game
+  EndOfGameSceneName: EndOfGame
   MaxDisplayTime: 5
   MinDisplayTime: 1
   HeartFeedbackCounterText: {fileID: 1926886072}
