@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3-MegaBaldness
   m_EditorClassIdentifier: 
   <Name>k__BackingField: MegaBaldness
-  <PatientPrefab>k__BackingField: {fileID: 0}
+  <PatientPrefab>k__BackingField: {fileID: 7271719952611048095, guid: ff165d66f21d2914b8317e8a9597d664, type: 3}
   <Conversation>k__BackingField: "My skin\u2019s all messy in these spots, see? And
     my ears feel kind of weird, I guess. Sort of what a buzzing sound would feel
     like, but in my skin, y\u2019know?"
