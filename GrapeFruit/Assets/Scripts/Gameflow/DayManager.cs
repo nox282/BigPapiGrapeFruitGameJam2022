@@ -9,9 +9,10 @@ public class DayManager : MonoBehaviour
     [SerializeField] public UIPanel TimerPanel;
     [SerializeField] public Transform PatientAnchor;
 	[SerializeField] public ConversationPanel ConversationPanel;
-
-	[SerializeField] private BadumController BadumController;
+	
+    [SerializeField] private BadumController BadumController;
 	[SerializeField] private IntroDialogData IntroDialogData;
+    [SerializeField] private SmellController SmellController;
 
 	private bool DayStarted;
     private float TimeLeft;
@@ -121,6 +122,7 @@ public class DayManager : MonoBehaviour
 
             case SymptomType.Odor:
                 {
+                    SmellController.StartSmelling();
                     break;
                 }
 
@@ -145,6 +147,7 @@ public class DayManager : MonoBehaviour
 
             case SymptomType.Odor:
                 {
+                    SmellController.StopSmelling();
                     break;
                 }
 
