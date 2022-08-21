@@ -9,13 +9,21 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
     private const string kIsOutString = "IsOut";
     private static int kIsOutHash = Animator.StringToHash(kIsOutString);
 
+    private const string kIsGoodString = "IsGood";
+    private static int kIsGoodHash = Animator.StringToHash(kIsGoodString);
+
+    private const string kIsBadString = "IsBad";
+    private static int kIsBadHash = Animator.StringToHash(kIsBadString);
+
     public float PatMaxTime = 1f;
     public int PatAmount = 2;
     [field: SerializeField] public IllnessData IllnessData { get; private set; }
 
     [field: SerializeField] public AudioSource SittingDownSFX { get; private set; }
-    [field: SerializeField] public AudioSource GettingUpSFX { get; private set; }
+    [field: SerializeField] public AudioSource GettingUpGoodSFX { get; private set; }
+    [field: SerializeField] public AudioSource GettingUpBadSFX { get; private set; }
     [field: SerializeField] public Animator AnimatorController { get; private set; }
+    [field: SerializeField] public Animator FeedbackAnimatorController { get; private set; }
 
     private List<TreatmentData> ExpectedTreatments = new List<TreatmentData>();
 
@@ -24,14 +32,17 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
     private DayManager DayManager;
     private int _patCount = 0;
     private float _patTimer = 0;
-
     private float _jumpTimer;
+    private bool _lastIsSuccess;
+
 
     private const float jumpTotalTime = .2f;
 
     private void OnEnable()
     {
         AnimatorController.SetBool(kIsOutHash, false);
+        FeedbackAnimatorController.SetBool(kIsGoodHash, false);
+        FeedbackAnimatorController.SetBool(kIsBadHash, false);
     }
 
     public void OnSpawned(DayManager dayManager, IllnessData illnessData)
@@ -53,17 +64,23 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
         {
             case Treatment treatment:
                 {
+                    treatment.OnUsed();
+
                     int treatmentIndex = ExpectedTreatments.IndexOf(treatment.TreatmentData);
                     if (treatmentIndex >= 0)
                     {
                         ExpectedTreatments.RemoveAt(treatmentIndex);
-                        treatment.OnUsed();
 
                         if (ExpectedTreatments.Count <= 0)
                         {
                             DayManager.OnSuccesfulTreatment();
                         }
                     }
+                    else
+                    {
+                        DayManager.OnFailedTreatment();
+                    }
+
                     break;
                 }
 
@@ -202,11 +219,24 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
 
     public void PlayGettingUpFX()
     {
-        GettingUpSFX.Play();
+        if (_lastIsSuccess)
+        {
+            GettingUpGoodSFX.Play();
+        }
+        else
+        {
+            GettingUpBadSFX.Play();
+        }
     }
 
     public void PlayOutAnimation()
     {
         AnimatorController.SetBool(kIsOutHash, true);
+    }
+
+    public void DisplayTreatmentFeedback(bool isSuccess)
+    {
+        FeedbackAnimatorController.SetBool(isSuccess ? kIsGoodHash : kIsBadHash, true);
+        _lastIsSuccess = isSuccess;
     }
 }
