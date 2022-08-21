@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 13-SomeAilment
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Some Ailment
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "Ho, there\u2019s nothing wrong with me, Doc! I\u2019m
     just here for a checkup."
   <Symptoms>k__BackingField:

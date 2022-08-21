@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2-TooUglyitis
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "To\xF6uglyitis"
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "I had questions about whether or not it was normal
     that my skin changed coloration that much. I had fewer, or perhaps MORE questions
     when it turned green. I also feel like my\u2026 head is shrinking? Ho yeah, my

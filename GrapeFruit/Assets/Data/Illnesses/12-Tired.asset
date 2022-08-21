@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 12-Tired
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Tired
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: I do have super itchy skin, but not much else I
     can think of.
   <Symptoms>k__BackingField:

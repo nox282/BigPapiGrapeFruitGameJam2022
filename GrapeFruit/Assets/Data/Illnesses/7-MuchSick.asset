@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7-MuchSick
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Much Sick
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "Bumps? I got \u2018em. Colors? Ho, I DEFINITELY
     see colors! And my ears? My ears\u2019 been tinglin\u2019 since the day I was
     born, Doc!"

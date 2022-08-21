@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 5-Cantfixit
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Cantfixit
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "Doc, my life feels like a psychedelic trip, right
     now. The colors are all messed up, there\u2019s a novel written in braille on
     my back and my head feels like it\u2019s imploding. Please assist!"
