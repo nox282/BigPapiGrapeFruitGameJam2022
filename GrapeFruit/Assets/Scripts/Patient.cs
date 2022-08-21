@@ -6,11 +6,16 @@ using UnityEngine.EventSystems;
 
 public class Patient : DragObjectRecipient, IPointerClickHandler
 {
+    private const string kIsOutString = "IsOut";
+    private static int kIsOutHash = Animator.StringToHash(kIsOutString);
+
     public float PatMaxTime = 1f;
     public int PatAmount = 2;
     [field: SerializeField] public IllnessData IllnessData { get; private set; }
 
     [field: SerializeField] public AudioSource SittingDownSFX { get; private set; }
+    [field: SerializeField] public AudioSource GettingUpSFX { get; private set; }
+    [field: SerializeField] public Animator AnimatorController { get; private set; }
 
     private List<TreatmentData> ExpectedTreatments = new List<TreatmentData>();
 
@@ -23,6 +28,11 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
     private float _jumpTimer;
 
     private const float jumpTotalTime = .2f;
+
+    private void OnEnable()
+    {
+        AnimatorController.SetBool(kIsOutHash, false);
+    }
 
     public void OnSpawned(DayManager dayManager, IllnessData illnessData)
     {
@@ -188,5 +198,15 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
     public void PlaySittingDownSFX()
     {
         SittingDownSFX.Play();
+    }
+
+    public void PlayGettingUpFX()
+    {
+        GettingUpSFX.Play();
+    }
+
+    public void PlayOutAnimation()
+    {
+        AnimatorController.SetBool(kIsOutHash, true);
     }
 }

@@ -194,8 +194,7 @@ public class DayManager : MonoBehaviour
     {
         // TODO play the animation before.
         CurrentPatient.OnPat -= OnPatPatient;
-        Destroy(CurrentPatient.gameObject);
-        TreatmentsRespawner.OnPatientDestroyed();
+        StartCoroutine(DismissPatientRoutine());
     }
 
     public DayData GetDayData()
@@ -221,7 +220,9 @@ public class DayManager : MonoBehaviour
 
     private IEnumerator DismissPatientRoutine()
     {
-        yield return null;
+        CurrentPatient.PlayOutAnimation();
+
+        yield return new WaitForSeconds(1f);
 
         Destroy(CurrentPatient.gameObject);
         TreatmentsRespawner.OnPatientDestroyed();
