@@ -49,9 +49,13 @@ public class Nose : MonoBehaviour
             shakeTimer -= Time.deltaTime;
         }
 
+        // Values are for 200fps and then inverse proportional to that
+        var lerp = State == NoseState.IDLE ? lerpValueIdle : lerpValue;
+        lerp *= Time.deltaTime / 0.005f;
+
         transform.position = new Vector3(
-            Mathf.Lerp(transform.position.x, endPosition.x, State == NoseState.IDLE ? lerpValueIdle : lerpValue),
-            Mathf.Lerp(transform.position.y, endPosition.y, State == NoseState.IDLE ? lerpValueIdle : lerpValue),
+            Mathf.Lerp(transform.position.x, endPosition.x, lerp),
+            Mathf.Lerp(transform.position.y, endPosition.y, lerp),
             0);
 
         transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(AnchorPos.x - transform.position.x, transform.position.y - AnchorPos.y) * Mathf.Rad2Deg);
