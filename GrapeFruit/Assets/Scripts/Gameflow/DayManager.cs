@@ -167,15 +167,22 @@ public class DayManager : MonoBehaviour
     {
         Debug.Log($"Patient {CurrentPatient.name} treated.");
         BarkSFXController.Bark();
-        DismissPatient();
+        DismissPatient(true);
+    }
+
+    public void OnFailedTreatment()
+    {
+        Debug.Log($"Patient {CurrentPatient.name} not treated.");
+        BarkSFXController.Whine();
+        DismissPatient(false);
     }
 
     // :oronuke:
-    public void DismissPatient()
+    public void DismissPatient(bool wasTreated)
     {
         // TODO play the animation before.
         CurrentPatient.OnPat -= OnPatPatient;
-        StartCoroutine(DismissPatientRoutine());
+        StartCoroutine(DismissPatientRoutine(wasTreated));
     }
 
     public DayData GetDayData()
@@ -199,10 +206,10 @@ public class DayManager : MonoBehaviour
         return timeSpent / CurrentDayData.MaxTime;
     }
 
-    private IEnumerator DismissPatientRoutine()
+    private IEnumerator DismissPatientRoutine(bool wasTreated)
     {
         CurrentPatient.PlayOutAnimation();
-
+        CurrentPatient.DisplayTreatmentFeedback(wasTreated);
         yield return new WaitForSeconds(1f);
 
         Destroy(CurrentPatient.gameObject);
