@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14fc49c40005b93488c74b644e81f3a6, type: 3}
-  m_Name: Cantfixit
+  m_Name: 9-UhOh
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Cantfixit
+  <Name>k__BackingField: Uh-Oh!
   <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
-  <Conversation>k__BackingField: 'Well, for starters, I have these gigantic bumps
-    on my butt, I basically have a waterfall coming out of my nose, and colors seem
-    to be switching around, for some reason. '
+  <Conversation>k__BackingField: I would like to find a non-disgusting way to describe
+    my problem to you, Doctor, but the sheer amount of sticky fluids coming out of
+    my nose, upon my rashy, bumpy under-nose region literally makes anything I say
+    gross.
   <Symptoms>k__BackingField:
-  - {fileID: 11400000, guid: 5c3c3bd4da8ff6a428f21920bc47373e, type: 2}
-  - {fileID: 11400000, guid: 649370cd6d7838c478b6e57e283c877e, type: 2}
+  - {fileID: 11400000, guid: 9d5b737654160514799184a50e1cc30b, type: 2}
+  - {fileID: 11400000, guid: bcb08161c306cce4a9ad488dcb8ff7b6, type: 2}
   <Treatments>k__BackingField:
-  - {fileID: 11400000, guid: 45744c8e3ed685449a95a97fb5f8d3a5, type: 2}
+  - {fileID: 11400000, guid: a6dde0a102d39bc43b543affe5a1bef1, type: 2}

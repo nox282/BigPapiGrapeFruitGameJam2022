@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14fc49c40005b93488c74b644e81f3a6, type: 3}
-  m_Name: TooUglyitis
+  m_Name: 6-Purps
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "To\xF6uglyitis"
+  <Name>k__BackingField: Purps
   <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
-  <Conversation>k__BackingField: 'Well, for starters, I have these gigantic bumps
-    on my butt, I basically have a waterfall coming out of my nose, and colors seem
-    to be switching around, for some reason. '
+  <Conversation>k__BackingField: "What\u2019s wrong with me? Ho, nothing a few tissues
+    can\u2019t fix! I\u2019m only here because my coworkers are kind of tired of
+    hearing me blow my nose\u2026"
   <Symptoms>k__BackingField:
   - {fileID: 11400000, guid: 5c3c3bd4da8ff6a428f21920bc47373e, type: 2}
-  - {fileID: 11400000, guid: 649370cd6d7838c478b6e57e283c877e, type: 2}
+  - {fileID: 11400000, guid: a4e04868fa6934041a6e9d1f8c08a1b6, type: 2}
   <Treatments>k__BackingField:
-  - {fileID: 11400000, guid: b4a16fbc751551c41b6dd5707a14ef62, type: 2}
+  - {fileID: 11400000, guid: 45744c8e3ed685449a95a97fb5f8d3a5, type: 2}
