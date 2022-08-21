@@ -118,7 +118,19 @@ public class DraggableObject : MonoBehaviour
         }
         HoveringDraggableObjects.Clear();
 
-        PawsController.Instance?.SetHoldingObject(false);
+		var screenPos = MainCamera.WorldToScreenPoint(transform.position);
+		var newPos = screenPos;
+
+		newPos.x = screenPos.x < 0 ? 0 : newPos.x;
+		newPos.y = screenPos.y < 0 ? 0 : newPos.y;
+
+		newPos.x = screenPos.x > Screen.width ? Screen.width : newPos.x;
+		newPos.y = screenPos.y > Screen.height ? Screen.height : newPos.y;
+
+		newPos = MainCamera.ScreenToWorldPoint(newPos);
+		transform.position = newPos;
+		
+		PawsController.Instance?.SetHoldingObject(false);
         Debug.Log($"{gameObject.name}.OnEndDrag");
     }
 

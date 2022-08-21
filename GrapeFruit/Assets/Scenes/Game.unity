@@ -502,6 +502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 6342997733100889067, guid: f22c33e0f794f14449424cfa6e781e27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8023224417725562711, guid: f22c33e0f794f14449424cfa6e781e27, type: 3}
       propertyPath: m_Camera
       value: 
