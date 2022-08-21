@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public class Patient : DragObjectRecipient, IPointerClickHandler
 {
-	public float PatMaxTime = 1.5f;
-	public int PatAmount = 3;
+	public float PatMaxTime = 1f;
+	public int PatAmount = 2;
     [field: SerializeField] public IllnessData IllnessData { get; private set; }
 
     private List<TreatmentData> ExpectedTreatments = new List<TreatmentData>();
@@ -109,11 +109,6 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		if(_patCount == 0)
-		{
-			_patTimer = PatMaxTime;
-		}
-
 		_patCount++;
 		
 		if(_patCount >= PatAmount)
@@ -133,6 +128,10 @@ public class Patient : DragObjectRecipient, IPointerClickHandler
 			{
 				_patCount = 0;
 			}
+		}
+		else
+		{
+			_patTimer = PatMaxTime;
 		}
 	}
 }

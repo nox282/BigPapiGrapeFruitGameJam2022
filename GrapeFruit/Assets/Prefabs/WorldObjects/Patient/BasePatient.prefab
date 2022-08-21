@@ -191,4 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac37884ef0163946a79be26503c1e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PatMaxTime: 1.5
+  PatAmount: 2
   <IllnessData>k__BackingField: {fileID: 11400000, guid: 64d5356bc1afb1c47a32b6beef698f24, type: 2}
