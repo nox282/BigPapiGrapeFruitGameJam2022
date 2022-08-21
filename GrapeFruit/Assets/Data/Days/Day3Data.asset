@@ -15,6 +15,7 @@ MonoBehaviour:
   <Illnesses>k__BackingField:
   - {fileID: 11400000, guid: 2c289b2e4ff0c304f8139e947fd4251e, type: 2}
   - {fileID: 11400000, guid: 90ecdbe81b0329c4cb907330ed550378, type: 2}
+  - {fileID: 11400000, guid: 7a56bc8d9d17ab44ab72f4fbb15c266b, type: 2}
   <MaxTime>k__BackingField: 120
   <IsTutorial>k__BackingField: 0
   <Music>k__BackingField: {fileID: 8300000, guid: 7167613621ec29949a2339fb0a4c6679, type: 3}
