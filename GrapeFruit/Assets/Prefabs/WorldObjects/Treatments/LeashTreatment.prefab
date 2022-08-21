@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: -6793954631635032310, guid: f3aec179485a48b49ae277ba0a75b730, type: 3}
       propertyPath: <TreatmentData>k__BackingField
       value: 
-      objectReference: {fileID: 11400000, guid: 6385bdde0655f7b4c833247431acaf8d, type: 2}
+      objectReference: {fileID: 11400000, guid: a6dde0a102d39bc43b543affe5a1bef1, type: 2}
     - target: {fileID: 4969290099359069851, guid: f3aec179485a48b49ae277ba0a75b730, type: 3}
       propertyPath: m_Name
       value: LeashTreatment
