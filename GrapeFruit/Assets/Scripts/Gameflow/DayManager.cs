@@ -34,6 +34,7 @@ public class DayManager : MonoBehaviour
             CurrentDayData = DefaultDayData;
         }
 
+        ConversationPanel.Close();
         StartDay();
         DayMusicPlayer.StartMusic();
     }
