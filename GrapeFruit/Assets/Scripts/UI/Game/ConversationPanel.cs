@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Events;
 
 public class ConversationPanel : UIPanel
 {
@@ -16,6 +14,11 @@ public class ConversationPanel : UIPanel
 	private Queue<string> _toDisplay = new Queue<string>();
 
 	private float _counter;
+
+	private float _closeTimer;
+
+	private const float totalTimer = 5f;
+
 	public bool HasDialog { get; private set; }
 
 	public void AddDialog(string dialog)
@@ -28,7 +31,7 @@ public class ConversationPanel : UIPanel
 	{
 		if(Helper != null)
 		{	
-			Helper.SetActive(false);
+			//Helper.SetActive(false);
 		}
 		if (_toDisplay.Count > 0)
 		{
@@ -36,12 +39,15 @@ public class ConversationPanel : UIPanel
 			Text.text = nextText;
 			_counter = TimeToDisplayHelp;
 			Open();
+
+			_closeTimer = totalTimer;
 		}
 		else
 		{
 			HasDialog = false;
 			Close();
 			_counter = 0;
+			_closeTimer = -1;
 		}
 	}
 
@@ -55,5 +61,15 @@ public class ConversationPanel : UIPanel
 				Helper.SetActive(true);
 			}
 		}
+
+		if (_closeTimer > 0)
+        {
+			_closeTimer -= Time.deltaTime;
+
+			if (_closeTimer <= 0)
+            {
+				ShowNext();
+            }
+        }
 	}
 }
