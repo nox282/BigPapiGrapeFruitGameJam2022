@@ -48,7 +48,7 @@ Shader "GrapeFruit/Rainbow"
             fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
-                fixed4 col = tex2D(_RainbowTex, (i.uv + _initialOffset) * _Time);
+                fixed4 col = tex2D(_RainbowTex, (i.uv + _initialOffset) + _Time * 5);
                 return col;
             }
             ENDCG
