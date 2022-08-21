@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public int GetCurrentDayIndex() => DayIndex;
 
+    public int HeartFeedbackCount;
+    public int AngryFeedbackCount;
+
     private void Awake()
     {
         if (Instance != null)
