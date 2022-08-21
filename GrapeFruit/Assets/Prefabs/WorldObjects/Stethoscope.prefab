@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342eb17a2bb104b4b8e996fdb062cb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RevertPosition: 1
+  RevertPosition: 0
   MaintainOffset: 0
   <ToolData>k__BackingField: {fileID: 11400000, guid: e0cc8f7f914d000409ddb079cc877ac6, type: 2}
 --- !u!4 &5022783048416906237 stripped
