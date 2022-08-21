@@ -15,11 +15,6 @@ MonoBehaviour:
   <Illnesses>k__BackingField:
   - {fileID: 11400000, guid: 2c289b2e4ff0c304f8139e947fd4251e, type: 2}
   - {fileID: 11400000, guid: 90ecdbe81b0329c4cb907330ed550378, type: 2}
-  - {fileID: 11400000, guid: 6c657788b7bb1cb4da7bd4f6c1fb1f16, type: 2}
-  - {fileID: 11400000, guid: 7a56bc8d9d17ab44ab72f4fbb15c266b, type: 2}
-  - {fileID: 11400000, guid: 3cbeadb1578d3484eba4ba713bfde22c, type: 2}
-  - {fileID: 11400000, guid: 608ac269be29c5443bd1dbd8da605760, type: 2}
-  - {fileID: 11400000, guid: 04da7090535407c46beac5d647ac6068, type: 2}
   <MaxTime>k__BackingField: 120
   <IsTutorial>k__BackingField: 0
   <Music>k__BackingField: {fileID: 8300000, guid: 7167613621ec29949a2339fb0a4c6679, type: 3}
