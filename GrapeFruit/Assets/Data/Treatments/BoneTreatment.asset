@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ae8f11900dc0d48978176842a07398, type: 3}
-  m_Name: Day1Data
+  m_Script: {fileID: 11500000, guid: 54687c5a1c39f7040b5f95e5714292ad, type: 3}
+  m_Name: BoneTreatment
   m_EditorClassIdentifier: 
-  <Illnesses>k__BackingField: []
-  <MaxTime>k__BackingField: 0
-  <IsTutorial>k__BackingField: 1
+  <Name>k__BackingField: LeashTreatment
+  <Icon>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: Leash Treatment

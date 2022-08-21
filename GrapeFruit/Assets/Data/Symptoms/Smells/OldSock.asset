@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36e955499678fb244bad6f831a77d957, type: 3}
-  m_Name: Garbage
+  m_Name: OldSock
   m_EditorClassIdentifier: 
   <SymptomType>k__BackingField: 1
-  <Description>k__BackingField: Best Kind Of Garbage
+  <Description>k__BackingField: Old Socks
   <RequiredTool>k__BackingField: {fileID: 11400000, guid: 32c84a425219c5b428c205232ab89d9c, type: 2}
   <FeedbackFloatValue>k__BackingField: 1

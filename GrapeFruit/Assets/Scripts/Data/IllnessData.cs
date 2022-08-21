@@ -5,16 +5,10 @@ public class IllnessData : ScriptableObject
 {
     [field: SerializeField]
     public string Name { get; private set; }
-
-    [field: SerializeField]
-    public Texture2D Icon { get; private set; }
-
+	
     [field: SerializeField]
     public Patient PatientPrefab { get; private set; }
-
-    [field: SerializeField]
-    public string Description { get; private set; }
-
+	
     [field: SerializeField]
     public string Conversation { get; private set; }
 

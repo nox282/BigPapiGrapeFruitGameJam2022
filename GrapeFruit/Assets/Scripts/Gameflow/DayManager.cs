@@ -131,7 +131,7 @@ public class DayManager : MonoBehaviour
 
     public void OnBeginSymptomFeedback(SymptomData symptomData)
     {
-        Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
+        Debug.Log($"OnBeginSymptomFeedback {symptomData.name}");
 
         switch (symptomData.SymptomType)
         {
@@ -156,7 +156,7 @@ public class DayManager : MonoBehaviour
 
     public void OnEndSymptomFeedback(SymptomData symptomData)
     {
-        Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
+        Debug.Log($"OnBeginSymptomFeedback {symptomData.name}");
 
         switch (symptomData.SymptomType)
         {
