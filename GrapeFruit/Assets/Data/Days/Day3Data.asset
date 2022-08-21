@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ae8f11900dc0d48978176842a07398, type: 3}
   m_Name: Day3Data
   m_EditorClassIdentifier: 
-  <Illnesses>k__BackingField: []
+  <Illnesses>k__BackingField:
+  - {fileID: 11400000, guid: 608ac269be29c5443bd1dbd8da605760, type: 2}
+  - {fileID: 11400000, guid: ae7669babcc23ad48bbf29b8327efda3, type: 2}
   <MaxTime>k__BackingField: 120
   <IsTutorial>k__BackingField: 0
   <Music>k__BackingField: {fileID: 8300000, guid: 7167613621ec29949a2339fb0a4c6679, type: 3}
