@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 15-Grossness
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Grossness
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "What do you bead \u201Cwhat\u2019s wrogg with be?\u201D
     BOTHING? *snif* EBERYTHIGG??? Apart frob the fact that I lost the use of sobe
     letters, I get *snif* those weird itches where by skid is a bit redder add *snif*

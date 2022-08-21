@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 4-SwipsyTurvies
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Swipsy-Turvies
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "I would like to bring your attention to this mountainous
     region, in my face. It\u2019s like my brain took some of itself and put it right
     in there. There\u2019s like a soft spot on the top of my head, too."

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 14-Yikes
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Yikes!
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "I\u2019m completely fine, doctor! My wife wanted
     me to come here, so I indulged her."
   <Symptoms>k__BackingField:

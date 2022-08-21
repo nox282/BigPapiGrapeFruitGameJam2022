@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 10-SlugFace
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Slugface
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 6032733043497918099, guid: 4615582978b9a0d4e822fe41f71ae7c6, type: 3}
   <Conversation>k__BackingField: "They say that a slight buzz in your ears means
     you\u2019re getting your adult ones, so you could say I\u2019m pretty hyped for
     that, but I could certainly do without all that mucus and weird itchy patches

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 8-RashleighTM
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "Rashleigh\u2122"
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: "Well, I do have this weird patch of skin that\u2019s
     like 95% skin flakes, so there\u2019s that\u2026"
   <Symptoms>k__BackingField:

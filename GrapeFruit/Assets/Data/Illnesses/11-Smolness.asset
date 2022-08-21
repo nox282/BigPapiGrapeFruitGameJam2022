@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 11-Smolness
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Smolness
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 0}
   <Conversation>k__BackingField: My head feels like a hot air balloon at the end
     of its trip.
   <Symptoms>k__BackingField:

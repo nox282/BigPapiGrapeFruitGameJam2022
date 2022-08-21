@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6-Purps
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Purps
-  <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
+  <PatientPrefab>k__BackingField: {fileID: 7271719952611048095, guid: c33457db56411734fba1fabbf7daf46e, type: 3}
   <Conversation>k__BackingField: "What\u2019s wrong with me? Ho, nothing a few tissues
     can\u2019t fix! I\u2019m only here because my coworkers are kind of tired of
     hearing me blow my nose\u2026"
