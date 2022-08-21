@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Nose : MonoBehaviour
 {
+    private const string kIsWiggleString = "IsWiggle";
+    private static int kIsWiggleHash = Animator.StringToHash(kIsWiggleString);
+
+    [SerializeField] private Animator AnimatorController;
+
     public NoseState State;
     public Vector3 AnchorPos;
 
@@ -77,8 +82,10 @@ public class Nose : MonoBehaviour
         {
             case NoseState.IDLE:
                 gotoPosition = initialPosition;
+                AnimatorController.SetBool(kIsWiggleHash, false);
                 break;
             case NoseState.FOLLOWING:
+                AnimatorController.SetBool(kIsWiggleHash, true);
                 break;
             default:
                 break;
