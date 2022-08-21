@@ -27,7 +27,7 @@ public class ConversationPanel : UIPanel
 		_toDisplay.Enqueue(dialog);
 	}
 
-	public void ShowNext()
+	public void ShowNext(bool timeout = false)
 	{
 		if(Helper != null)
 		{	
@@ -42,7 +42,7 @@ public class ConversationPanel : UIPanel
 
 			_closeTimer = totalTimer;
 		}
-		else
+		else if (timeout)
 		{
 			HasDialog = false;
 			Close();
@@ -68,7 +68,7 @@ public class ConversationPanel : UIPanel
 
 			if (_closeTimer <= 0)
             {
-				ShowNext();
+				ShowNext(true);
             }
         }
 	}
