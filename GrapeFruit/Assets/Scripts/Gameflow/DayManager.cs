@@ -33,7 +33,9 @@ public class DayManager : MonoBehaviour
             CurrentDayData = DefaultDayData;
         }
 
-        StartDay();
+		ConversationPanel.Close();
+
+		StartDay();
     }
 
     private void Update()

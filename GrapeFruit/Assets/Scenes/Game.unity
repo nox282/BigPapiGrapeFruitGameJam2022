@@ -544,7 +544,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1842207288417554643, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_Alpha
-      value: 1
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083409490209690847, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
+      propertyPath: m_text
+      value: 'Oh no, placeholder text!
+
+        My one weakness!
+
+        Aaaaaaaghhhhh!!!'
       objectReference: {fileID: 0}
     - target: {fileID: 3083409490209690847, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_fontAsset
@@ -608,11 +616,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919945432947502953, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1189.9
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 3919945432947502953, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 339.28
+      value: 209.4
       objectReference: {fileID: 0}
     - target: {fileID: 3919945432947502953, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -644,11 +652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919945432947502953, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1165
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3919945432947502953, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 742
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3919945432947502953, guid: eaeb06c48b466134e8e2889fe7dec5b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
