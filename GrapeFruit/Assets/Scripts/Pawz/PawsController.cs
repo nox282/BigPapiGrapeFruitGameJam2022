@@ -68,6 +68,10 @@ public class PawsController : MonoBehaviour
         }
         else if (isHoldingObject)
         {
+            //Clamp
+            viewportMousePos.x = Mathf.Clamp(viewportMousePos.x, 0f, 1f);
+            viewportMousePos.y = Mathf.Clamp(viewportMousePos.y, 0f, .9f);
+
             currentActivePaw.Follow(viewportMousePos);
         }
         else
