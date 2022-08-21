@@ -82,6 +82,12 @@ public class DayManager : MonoBehaviour
             DayStarted = true;
             TimeLeft = CurrentDayData.MaxTime;
         }
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.HeartFeedbackCount = 0;
+            GameManager.Instance.AngryFeedbackCount = 0;
+        }
     }
 
     public void StopDay()
@@ -160,6 +166,12 @@ public class DayManager : MonoBehaviour
     {
         Debug.Log($"Patient {CurrentPatient.name} treated.");
         BarkSFXController.Bark();
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.HeartFeedbackCount++;
+        }
+
         DismissPatient(true);
     }
 
@@ -167,6 +179,12 @@ public class DayManager : MonoBehaviour
     {
         Debug.Log($"Patient {CurrentPatient.name} not treated.");
         BarkSFXController.Whine();
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AngryFeedbackCount++;
+        }
+
         DismissPatient(false);
     }
 
