@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     private int DayIndex;
 
+    public int GetCurrentDayIndex() => DayIndex;
+
     private void Awake()
     {
         if (Instance != null)
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
 
         return GameData.Days[DayIndex];
     }
+
 
     public void OnDayFinished()
     {

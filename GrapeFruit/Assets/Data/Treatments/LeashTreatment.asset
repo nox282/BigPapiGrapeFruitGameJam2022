@@ -10,5 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54687c5a1c39f7040b5f95e5714292ad, type: 3}
-  m_Name: TestTreatmentB
+  m_Name: LeashTreatment
   m_EditorClassIdentifier: 
+  <Name>k__BackingField: LeashTreatment
+  <Icon>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: Leash Treatment

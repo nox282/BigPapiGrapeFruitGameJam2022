@@ -6,9 +6,11 @@ public class SmellController : MonoBehaviour
     private static int kIsSmellingHash = Animator.StringToHash(kIsSmellingString);
 
     [SerializeField] private Animator SmellAnimatorController;
+    [SerializeField] private TMPro.TMP_Text SmellText;
 
-    public void StartSmelling()
+    public void StartSmelling(string smellDescription)
     {
+        SmellText.text = smellDescription;
         SmellAnimatorController.SetBool(kIsSmellingHash, true);
     }
 

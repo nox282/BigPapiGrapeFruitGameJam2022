@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Illnesses>k__BackingField:
   - {fileID: 11400000, guid: 64d5356bc1afb1c47a32b6beef698f24, type: 2}
+  - {fileID: 11400000, guid: 6fee62d375537ce428b8270f6899edd5, type: 2}
   <MaxTime>k__BackingField: 0
   <IsTutorial>k__BackingField: 1

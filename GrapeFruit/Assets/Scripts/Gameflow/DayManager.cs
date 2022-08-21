@@ -8,14 +8,15 @@ public class DayManager : MonoBehaviour
     [SerializeField] public TMPro.TMP_Text TimeText;
     [SerializeField] public UIPanel TimerPanel;
     [SerializeField] public Transform PatientAnchor;
-	[SerializeField] public ConversationPanel ConversationPanel;
-	
+    [SerializeField] public ConversationPanel ConversationPanel;
+
     [SerializeField] private BadumController BadumController;
-	[SerializeField] private IntroDialogData IntroDialogData;
+    [SerializeField] private IntroDialogData IntroDialogData;
     [SerializeField] private SmellController SmellController;
 
-	private bool DayStarted;
+    private bool DayStarted;
     private float TimeLeft;
+    private int PatientIndex;
 
     private DayData CurrentDayData;
     private Patient CurrentPatient;
@@ -65,6 +66,8 @@ public class DayManager : MonoBehaviour
             return;
         }
 
+        PatientIndex = 0;
+
         if (!CurrentDayData.IsTutorial)
         {
             DayStarted = true;
@@ -90,33 +93,38 @@ public class DayManager : MonoBehaviour
             return;
         }
 
-        var randomIndex = Random.Range(0, CurrentDayData.Illnesses.Length - 1);
-        var illnessData = CurrentDayData.Illnesses[randomIndex];
+        if (PatientIndex < 0 || PatientIndex >= CurrentDayData.Illnesses.Length)
+        {
+            StopDay();
+            return;
+        }
+
+        var illnessData = CurrentDayData.Illnesses[PatientIndex++];
 
         CurrentPatient = GameObject.Instantiate<Patient>(illnessData.PatientPrefab);
         CurrentPatient.OnSpawned(this, illnessData);
         CurrentPatient.transform.SetParent(PatientAnchor);
 
-		// generic patient arrival dialog
-		ConversationPanel.AddDialog(IntroDialogData.GetRandomArrivalDialog());
-		ConversationPanel.ShowNext();
-		CurrentPatient.OnPat += OnPatPatient;
-	}
+        // generic patient arrival dialog
+        ConversationPanel.AddDialog(IntroDialogData.GetRandomArrivalDialog());
+        ConversationPanel.ShowNext();
+        CurrentPatient.OnPat += OnPatPatient;
+    }
 
-	private void OnPatPatient()
-	{
-		if(ConversationPanel.HasDialog)
-		{
-			ConversationPanel.ShowNext();
-		}
-		else
-		{
-			ConversationPanel.AddDialog(CurrentPatient.IllnessData.Conversation);
-			ConversationPanel.ShowNext();
-		}
-	}
+    private void OnPatPatient()
+    {
+        if (ConversationPanel.HasDialog)
+        {
+            ConversationPanel.ShowNext();
+        }
+        else
+        {
+            ConversationPanel.AddDialog(CurrentPatient.IllnessData.Conversation);
+            ConversationPanel.ShowNext();
+        }
+    }
 
-	public void OnBeginSymptomFeedback(SymptomData symptomData)
+    public void OnBeginSymptomFeedback(SymptomData symptomData)
     {
         Debug.Log($"OnBeginSymptomFeedback {symptomData.Name}");
 
@@ -130,7 +138,7 @@ public class DayManager : MonoBehaviour
 
             case SymptomType.Odor:
                 {
-                    SmellController.StartSmelling();
+                    SmellController.StartSmelling(symptomData.Description);
                     break;
                 }
 
@@ -175,8 +183,9 @@ public class DayManager : MonoBehaviour
     // :oronuke:
     public void DismissPatient()
     {
-		// TODO play the animation before.
-		CurrentPatient.OnPat -= OnPatPatient;
-		Destroy(CurrentPatient.gameObject);
+        // TODO play the animation before.
+        CurrentPatient.OnPat -= OnPatPatient;
+        Destroy(CurrentPatient.gameObject);
     }
+
 }
