@@ -40,6 +40,7 @@ public class DayMusicPlayer : MonoBehaviour
             if (AudioSource.clip != dayData.MusicFastest)
             {
                 AudioSource.clip = dayData.MusicFastest;
+                AudioSource.Play();
             }
 
             return;
@@ -50,6 +51,7 @@ public class DayMusicPlayer : MonoBehaviour
             if (AudioSource.clip != dayData.MusicFast)
             {
                 AudioSource.clip = dayData.MusicFast;
+                AudioSource.Play();
             }
 
             return;
