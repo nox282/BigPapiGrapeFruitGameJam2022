@@ -7,6 +7,7 @@ public class Paw : MonoBehaviour
     public GameObject CenterPivot;
     public float ShrinkSize;
     public Vector3 AnchorPos;
+    public BarkController BarkController;
 
     public PawState State;
 
@@ -30,6 +31,7 @@ public class Paw : MonoBehaviour
         gotoPosition = initialPosition;
 
         StartCoroutine(RandomizeIdleOffset());
+        StartCoroutine(CheckPapi());
     }
 
     private void Update()
@@ -118,6 +120,26 @@ public class Paw : MonoBehaviour
             idleOffset.y = Random.Range(-1f, 1f);
 
             yield return new WaitForSeconds(Random.Range(2f, 5f));
+        }
+    }
+
+    private IEnumerator CheckPapi()
+    {
+        while (true)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                var hits = Physics2D.RaycastAll(CenterPivot.transform.position, Vector3.forward, 1000);
+                foreach (var hit in hits)
+                {
+                    if (hit.transform.name == "Papi")
+                    {
+                        BarkController.StartBark();
+                    }
+                }
+            }
+
+            yield return new WaitForSeconds(1f);
         }
     }
 }

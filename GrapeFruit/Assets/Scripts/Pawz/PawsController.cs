@@ -70,11 +70,6 @@ public class PawsController : MonoBehaviour
         {
             currentActivePaw.Follow(viewportMousePos);
         }
-        //else if (!Input.GetMouseButton(0) && Input.GetMouseButton(1))
-        //{
-        //    nose.SetState(Nose.NoseState.FOLLOWING);
-        //    nose.Follow(viewportMousePos);
-        //}
         else
         {
             leftPaw.SetState(Paw.PawState.IDLE);
