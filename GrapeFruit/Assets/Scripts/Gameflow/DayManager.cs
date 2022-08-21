@@ -18,10 +18,10 @@ public class DayManager : MonoBehaviour
     [SerializeField] private DayMusicPlayer DayMusicPlayer;
     [SerializeField] private BarkSFXController BarkSFXController;
 
-	[SerializeField] private ToolData SniffTool;
-	[SerializeField] private ToolData HeartTool;
+    [SerializeField] private ToolData SniffTool;
+    [SerializeField] private ToolData HeartTool;
 
-	private bool DayStarted;
+    private bool DayStarted;
     private float TimeLeft;
     private int PatientIndex;
 
@@ -124,43 +124,36 @@ public class DayManager : MonoBehaviour
 
     private void OnPatPatient()
     {
-        if (ConversationPanel.HasDialog)
-        {
-            ConversationPanel.ShowNext();
-        }
-        else
-        {
-            ConversationPanel.AddDialog(CurrentPatient.IllnessData.Conversation);
-            ConversationPanel.ShowNext();
-        }
+        ConversationPanel.AddDialog(CurrentPatient.IllnessData.Conversation);
+        ConversationPanel.ShowNext();
     }
 
     public void OnBeginSymptomFeedback(SymptomData symptomData)
     {
         Debug.Log($"OnBeginSymptomFeedback {symptomData.name}");
 
-		if(symptomData.RequiredTool == SniffTool)
-		{
-			SmellController.StartSmelling(symptomData.Description);
-		}
-		else if(symptomData.RequiredTool == HeartTool)
-		{
-			BadumController.StartBadum(symptomData.FeedbackFloatValue);
-		}
+        if (symptomData.RequiredTool == SniffTool)
+        {
+            SmellController.StartSmelling(symptomData.Description);
+        }
+        else if (symptomData.RequiredTool == HeartTool)
+        {
+            BadumController.StartBadum(symptomData.FeedbackFloatValue);
+        }
     }
 
     public void OnEndSymptomFeedback(SymptomData symptomData)
     {
         Debug.Log($"OnBeginSymptomFeedback {symptomData.name}");
 
-		if (symptomData.RequiredTool == SniffTool)
-		{
-			SmellController.StopSmelling();
-		}
-		else if (symptomData.RequiredTool == HeartTool)
-		{
-			BadumController.StopBadum();
-		}
+        if (symptomData.RequiredTool == SniffTool)
+        {
+            SmellController.StopSmelling();
+        }
+        else if (symptomData.RequiredTool == HeartTool)
+        {
+            BadumController.StopBadum();
+        }
     }
 
     public void OnSuccesfulTreatment()

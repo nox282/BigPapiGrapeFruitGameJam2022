@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Text>k__BackingField: {fileID: 3083409490209690847}
-  TimeToAutoNext: 5
+  TimeToAutoNext: 8
 --- !u!1 &3919945433059107953
 GameObject:
   m_ObjectHideFlags: 0
