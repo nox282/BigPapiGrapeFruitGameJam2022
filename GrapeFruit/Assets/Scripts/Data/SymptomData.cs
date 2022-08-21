@@ -10,14 +10,8 @@ public enum SymptomType
 public class SymptomData : ScriptableObject
 {
     [field: SerializeField]
-    public string Name { get; private set; }
-
-    [field: SerializeField]
     public SymptomType SymptomType { get; private set; }
-
-    [field: SerializeField]
-    public Texture2D Icon { get; private set; }
-
+	
     [field: SerializeField]
     public string Description { get; private set; }
 

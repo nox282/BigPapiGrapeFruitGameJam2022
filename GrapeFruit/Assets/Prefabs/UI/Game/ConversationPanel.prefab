@@ -276,9 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2797dea18ec954faaf1262e95de785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Helper: {fileID: 756503508}
   <Text>k__BackingField: {fileID: 3083409490209690847}
-  TimeToDisplayHelp: 6
+  TimeToAutoNext: 5
 --- !u!1 &3919945433059107953
 GameObject:
   m_ObjectHideFlags: 0

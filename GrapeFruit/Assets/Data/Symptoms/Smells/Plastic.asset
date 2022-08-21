@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36e955499678fb244bad6f831a77d957, type: 3}
-  m_Name: LowHeartRate 1
+  m_Name: Plastic
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: LowHeartRate
-  <SymptomType>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: 0}
-  <Description>k__BackingField: Low Heart Rate
-  <RequiredTool>k__BackingField: {fileID: 11400000, guid: e0cc8f7f914d000409ddb079cc877ac6, type: 2}
-  <FeedbackFloatValue>k__BackingField: 0.5
+  <SymptomType>k__BackingField: 1
+  <Description>k__BackingField: Plastic
+  <RequiredTool>k__BackingField: {fileID: 11400000, guid: 32c84a425219c5b428c205232ab89d9c, type: 2}
+  <FeedbackFloatValue>k__BackingField: 1

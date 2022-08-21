@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14fc49c40005b93488c74b644e81f3a6, type: 3}
-  m_Name: TutorialIllness2_Purps
+  m_Name: MuchSick
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Purps
-  <Icon>k__BackingField: {fileID: 0}
+  <Name>k__BackingField: Much Sick
   <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
-  <Description>k__BackingField: 
-  <Conversation>k__BackingField: 
+  <Conversation>k__BackingField: 'Well, for starters, I have these gigantic bumps
+    on my butt, I basically have a waterfall coming out of my nose, and colors seem
+    to be switching around, for some reason. '
   <Symptoms>k__BackingField:
   - {fileID: 11400000, guid: 5c3c3bd4da8ff6a428f21920bc47373e, type: 2}
   - {fileID: 11400000, guid: a4e04868fa6934041a6e9d1f8c08a1b6, type: 2}
   <Treatments>k__BackingField:
-  - {fileID: 11400000, guid: 6385bdde0655f7b4c833247431acaf8d, type: 2}
+  - {fileID: 11400000, guid: 45744c8e3ed685449a95a97fb5f8d3a5, type: 2}
