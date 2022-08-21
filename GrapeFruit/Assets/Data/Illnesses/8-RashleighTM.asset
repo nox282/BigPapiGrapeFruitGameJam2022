@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14fc49c40005b93488c74b644e81f3a6, type: 3}
-  m_Name: Stinky
+  m_Name: 8-RashleighTM
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Stinky
+  <Name>k__BackingField: "Rashleigh\u2122"
   <PatientPrefab>k__BackingField: {fileID: 3958999537838429012, guid: 14b0860744ce2834ba24eea71add2aea, type: 3}
-  <Conversation>k__BackingField: 'Well, for starters, I have these gigantic bumps
-    on my butt, I basically have a waterfall coming out of my nose, and colors seem
-    to be switching around, for some reason. '
+  <Conversation>k__BackingField: "Well, I do have this weird patch of skin that\u2019s
+    like 95% skin flakes, so there\u2019s that\u2026"
   <Symptoms>k__BackingField:
   - {fileID: 11400000, guid: 9d5b737654160514799184a50e1cc30b, type: 2}
-  - {fileID: 11400000, guid: a4e04868fa6934041a6e9d1f8c08a1b6, type: 2}
+  - {fileID: 11400000, guid: b187e8255e15a3b4ab04bbb6e631fe88, type: 2}
   <Treatments>k__BackingField:
-  - {fileID: 11400000, guid: b4a16fbc751551c41b6dd5707a14ef62, type: 2}
+  - {fileID: 11400000, guid: a6dde0a102d39bc43b543affe5a1bef1, type: 2}
