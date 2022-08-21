@@ -14,6 +14,7 @@ public class DayManager : MonoBehaviour
     [SerializeField] private IntroDialogData IntroDialogData;
     [SerializeField] private SmellController SmellController;
     [SerializeField] private TreatmentsRespawner TreatmentsRespawner;
+    [SerializeField] private DayMusicPlayer DayMusicPlayer;
 
     private bool DayStarted;
     private float TimeLeft;
@@ -34,6 +35,7 @@ public class DayManager : MonoBehaviour
         }
 
         StartDay();
+        DayMusicPlayer.StartMusic();
     }
 
     private void Update()
@@ -192,4 +194,24 @@ public class DayManager : MonoBehaviour
         TreatmentsRespawner.OnPatientDestroyed();
     }
 
+    public DayData GetDayData()
+    {
+        return CurrentDayData;
+    }
+
+    public float GetTimeLeftRatio()
+    {
+        if (CurrentDayData == null)
+        {
+            return 0f;
+        }
+
+        if (Mathf.Abs(CurrentDayData.MaxTime) <= float.Epsilon)
+        {
+            return 0f;
+        }
+
+        var timeSpent = CurrentDayData.MaxTime - TimeLeft;
+        return timeSpent / CurrentDayData.MaxTime;
+    }
 }

@@ -17,3 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6fee62d375537ce428b8270f6899edd5, type: 2}
   <MaxTime>k__BackingField: 0
   <IsTutorial>k__BackingField: 1
+  <Music>k__BackingField: {fileID: 8300000, guid: 9c67c0da385918d48b6428f8bc374d1c, type: 3}
+  <MusicFast>k__BackingField: {fileID: 0}
+  <MusicFastest>k__BackingField: {fileID: 0}
